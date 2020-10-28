@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Knut's Gatsby for Strøm forsyning`,
+    title: `Knut's Gatsby for kraft priser og forbruk`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
