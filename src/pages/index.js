@@ -9,10 +9,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Strom</h1>
-        <p>
-        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=9622836f-05cf-45a3-b1fc-f95826b1fa2f&autoAuth=true&ctid=cb240011-8916-4ac6-9e59-e54c0cb14ddd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true">
-            </iframe>
-        </p>
+   <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=9622836f-05cf-45a3-b1fc-f95826b1fa2f&autoAuth=true&ctid=cb240011-8916-4ac6-9e59-e54c0cb14ddd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true">
+    </iframe>
+   
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
