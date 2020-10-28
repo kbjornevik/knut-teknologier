@@ -7,10 +7,11 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Strom</h1>
-   <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=9622836f-05cf-45a3-b1fc-f95826b1fa2f&autoAuth=true&ctid=cb240011-8916-4ac6-9e59-e54c0cb14ddd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true">
-    </iframe>
+        <SEO title="Home" />
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    <h1>Strøm</h1>
+        <iframe width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiN2Q5M2M0ZTctNzMzZS00ZjliLWJlM2YtZmU5NDk5N2U1ZGFkIiwidCI6ImNiMjQwMDExLTg5MTYtNGFjNi05ZTU5LWU1NGMwY2IxNGRkZCIsImMiOjh9&pageName=ReportSection1a134217d3b62c57a41c" frameborder="0" allowFullScreen="true">
+        </iframe>
    
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
