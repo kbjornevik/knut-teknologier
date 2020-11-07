@@ -6,7 +6,6 @@ import {
   Card,
   CardTitle,
   CardBody,
-  CardText,
   Form,
   FormGroup,
   Input,
@@ -30,7 +29,7 @@ const Sidebar = () => (
               />
             </FormGroup>
             <Button className="btn btn-outline-success text-uppercase">
-              Abboner
+              Abonner
             </Button>
           </Form>
         </CardBody>
