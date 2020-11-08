@@ -1,13 +1,16 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCoffee,
-  faAddressBook,
-  faAirFreshener,
-  faBus,
-  faCoins,
-  faDice,
-} from '@fortawesome/free-solid-svg-icons'
+  faFacebook,
+  faGoogle,
+  faInstagram,
+  faStrava
+  
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faMountain
+  
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => (
   <div className="site-footer">
@@ -22,49 +25,52 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-facebook-f fa-2x" />
+             <FontAwesomeIcon icon={faFacebook} size="2x" />
+           
           </a>
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
-            className="twitter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-twitter fa-2x" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com"
+            href="https://www.instagram.com"
             className="instagram"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-instagram fa-2x" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </li>
-        <li>
+         <li>
           <a
             href="https://www.google.com"
             className="google"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-google fa-2x" />
+             <FontAwesomeIcon icon={faGoogle} size="2x" />
           </a>
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
-            className="linkedin"
+            href="https://www.Strava.com"
+            className="Strava"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-linkedin fa-2x" />
+             <FontAwesomeIcon icon={faStrava} size="2x" />
           </a>
         </li>
+        <li>
+          <a
+            href="https://www.uc.no/nb/"
+            className="Ulriken"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+             <FontAwesomeIcon icon={faMountain} size="2x" />
+          </a>
+        </li>
+        
+        
       </ul>
     </div>
   </div>
