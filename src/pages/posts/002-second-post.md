@@ -1,8 +1,8 @@
 ---
 title: "Second Post - HTML"
 date: 2018-12-02 08:00:00
+description: "Hello World"
 author: "Knut Bjørnevik"
-path: "/second-post"
 image: "../../images/binary.jpg"
 tags:
   - code

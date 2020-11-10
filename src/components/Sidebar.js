@@ -50,20 +50,20 @@ const Sidebar = () => (
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3">
-            De siste inleggene
+            De siste innleggene
           </CardTitle>
           <StaticQuery  query={sidebarQuery}  render={(data) => (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card key={node.id}>
-                  <Link to={node.frontmatter.path}>
+                  <Link to={node.fields.slug.path}>
                     <Img  className="card-image-top"
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
+                      fluid={node.frontmatter.image.childImageSharp.fluid} />
                   </Link>
                   <CardBody>
-                    <CardTitle>
-                    <Link to={node.frontmatter.path}>
+                     <span className="text-info"> {node.frontmatter.date}</span>
+                     <CardTitle>
+                     <Link to={node.fields.slug}>
                         {node.frontmatter.title}
                       </Link>
                     </CardTitle>
@@ -82,14 +82,14 @@ const Sidebar = () => (
     query sidebarQuery {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 3
+        limit: 4
       ) {
         edges{
           node{
             id
             frontmatter{
               title
-              path
+              date(formatString: "DD-MM-YYYY")
               image{
                 childImageSharp {
                   fluid(maxWidth: 300) {
@@ -97,6 +97,9 @@ const Sidebar = () => (
                   }
                 }
               }
+            }
+            fields{
+              slug
             }
           }
         }

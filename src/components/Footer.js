@@ -34,9 +34,8 @@ const Footer = () => (
             href="https://www.instagram.com"
             className="instagram"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            rel="noopener noreferrer">
+           <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </li>
          <li>
@@ -44,15 +43,14 @@ const Footer = () => (
             href="https://www.google.com"
             className="google"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer" >
              <FontAwesomeIcon icon={faGoogle} size="2x" />
           </a>
         </li>
         <li>
           <a
             href="https://www.Strava.com"
-            className="Strava"
+            className="strava"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,7 +60,7 @@ const Footer = () => (
         <li>
           <a
             href="https://www.uc.no/nb/"
-            className="Ulriken"
+            className="ulriken"
             target="_blank"
             rel="noopener noreferrer"
           >

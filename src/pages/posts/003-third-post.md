@@ -1,8 +1,8 @@
 ---
 title: "Third Post - CSS"
 date: 2018-12-03 09:00:00
+description: "Hello World"
 author: "Knut Bjørnevik"
-path: "/third-post"
 image: "../../images/binary.jpg"
 tags:
   - tutorial

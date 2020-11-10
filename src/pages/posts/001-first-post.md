@@ -1,12 +1,13 @@
 ---
-title: "First Post - Innledning"
-date: 2018-12-01 07:00:00
+title: "Filefjell i høstfarger"
+date: 2019-10-09 07:00:00
+description: "Filefjell på høsttur."
 author: "Knut Bjørnevik"
-path: "/first-post"
-image: "../../images/binary.jpg"
+image: "../../images/filefjell_host.jpg"
 tags:
-  - code
+  - Filefjell
 ---
 
-Welcome to Ian's Code Blog, I hope you enjoy our content. Welcome to Ian's Code Blog, I hope you enjoy our content.
-Welcome to Ian's Code Blog, I hope you enjoy our content. Welcome to Ian's Code Blog, I hope you enjoy our content.
+#Filefjell 
+Filefjell har endeløse vidder hvor en kan spaserer i timevis uten å treffe et menneske. Hver årstid har sine egne farger som her på høsten.
+Høsten er kort på fjellet og det gjelder å følge med når fargene skifter slik at en får med seg fargendringene fra grønt- gult til rødt

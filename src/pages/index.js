@@ -5,25 +5,22 @@ import SEO from "../components/seo"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Post from "../components/Post"
 import Img from "gatsby-image"
-import { Row, Col} from "reactstrap"
-import Sidebar from "../components/Sidebar"
 
 const IndexPage = () => (
   <Layout>
       <SEO title="Home" keywords ={['gatsby','application','react']} />
       <h1>Knut's temaer</h1>
-      <Row>
-        <Col md="8"> 
-        <StaticQuery
+       <StaticQuery
         query={indexQuery}
         render={data => {
            return (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Post 
+                  id = {node.id}
                   title={node.frontmatter.title}
                   author={node.frontmatter.author}
-                  path={node.frontmatter.path}
+                  slug={node.fields.slug}
                   date={node.frontmatter.date}
                   body={node.excerpt}
                   fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -35,12 +32,7 @@ const IndexPage = () => (
           )
          }}
         />
-        </Col>
-        <Col md="4">
-           <Sidebar/>
-        </Col>
-
-      </Row>
+        
     </Layout>
   )
 
@@ -48,7 +40,7 @@ const IndexPage = () => (
   query {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3     ) 
+      limit: 4 ) 
      {
      totalCount
      edges {
@@ -58,7 +50,6 @@ const IndexPage = () => (
            title
            date(formatString: "MMM Do YYYY")
            author
-           path
            tags
            image {
             childImageSharp {
@@ -68,12 +59,16 @@ const IndexPage = () => (
             }
           }
          }
+         fields {
+          slug
+        }
          excerpt
        }
  
      }
     }
-   }`
+   }
+   `
 
 
 export default IndexPage
