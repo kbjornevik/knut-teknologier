@@ -61,6 +61,17 @@ exports.onCreateNode = ({ node, actions }) => {
           },
         })
       })
+      let tags = []
+
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.tags")) {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      }
+    })
+    let tagPostCounts = {}
+    tags.forEach(tag => {
+      tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1
+    })
     })
 }
 
