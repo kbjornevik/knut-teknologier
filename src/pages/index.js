@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Post from "../components/Post"
-import Img from "gatsby-image"
 
 const IndexPage = () => (
   <Layout>
@@ -48,7 +47,7 @@ const IndexPage = () => (
          id
          frontmatter {
            title
-           date(formatString: "MMM Do YYYY")
+           date(formatString: "YYYY Do MM")
            author
            tags
            image {

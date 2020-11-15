@@ -7,7 +7,7 @@ image: "../../images/gatsbyjs.jpg"
 tags:
   - Tekologi
   - Gatsby
-  - Web Server
+  - Webserver
 ---
 
 >## Gatsby verktøy for generering av statiske Web sider
@@ -33,9 +33,25 @@ Markdown er et lett markeringsspråk med syntaks for formatering av ren tekst, o
 
 Siden den første beskrivelsen av Markdown inneholdt tvetydigheter og ubesvarte spørsmål, har implementeringene som dukket opp gjennom årene subtile forskjeller, og mange kommer med syntaksutvidelser.  [LINK](https://en.wikipedia.org/wiki/Markdown)  
 
+En vil benytte en plugin gatsby-transformer-remark for å gjenkjenne filer som er Markdown og lese innholdet. Pluggen vil konvertere frontmatter-metadata-delen av Markdown-filene dine som "frontmatter" og innholdsdelen som HTML.
+
+> #### Frontmatter for metadata i Markdown filer
+Når en oppretter en Markdown-fil, kan en inkludere et sett med nøkkelverdipar som kan brukes til å gi tilleggsdata som er relevante for bestemte sider i GraphQL-datalaget. Disse dataene kalles frontmatter og er betegnet med de tre streker i begynnelsen og slutten av blokken. Denne blokken blir analysert av gatsby-transformator-bemerkning som frontmaterie. GraphQL API vil gi nøkkelverdiparene som data i React-komponentene dine.
+
+<a target="_blank" rel="noopener noreferrer" href= "https://www.gatsbyjs.com/docs/adding-markdown-pages" > Link Markdown Pages</a>
+
+>### MDX i Gatsby
+Markdown standard syntaksen er rettet mot tekstbasert innhold. Dette endret seg ved introduksjon av MDX. MDX er et supersett av Markdown som lar oss legge inn JSX direkte i Markdown-filer.
+<a target="_blank" rel="noopener noreferrer" href= "https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby" > Link artikkel om MDX </a>
+
+src/markdown-pages/post-1.md
+_ _ _
+title: "Gatsby en statsik web server"
+date: 2020-12-30 07:00:00
+description: "Gatsby "
 
 > ## Fordeler med et statisk nettsted
-> 1. Den gir bedre sikkerhet i forhold dynamiske nettsteder (dynamiske nettsteder er i fare for nettangrep)
+> 1. Bedre sikkerhet i forhold dynamiske nettsteder (dynamiske nettsteder har større risiko for nettangrep)
 > 2. Forbedret ytelse for sluttbrukere sammenlignet med dynamiske nettsteder 
 > 3. Færre eller ingen avhengigheter av systemer som databaser eller andre applikasjonsservere 
 > 4. Kostnadsbesparelser ved bruk av skylagring, i motsetning til et vertsmiljø 
@@ -43,13 +59,3 @@ Siden den første beskrivelsen av Markdown inneholdt tvetydigheter og ubesvarte 
 
 > ## Ulemper med et statisk nettsted
 > 1. Dynamisk funksjonalitet må utføres på klientsiden
-
-> Markdown.generate();
-
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue

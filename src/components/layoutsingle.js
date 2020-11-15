@@ -13,7 +13,7 @@ import Footer from "./Footer"
 import {Row,Col} from 'reactstrap'
 
 import "../styles/index.scss"
-import Sidebar from "../components/Sidebar"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuerySingle {

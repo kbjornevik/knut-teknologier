@@ -8,11 +8,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from "reactstrap"
+  NavLink } from "reactstrap"
 
 class Header extends React.Component {
   constructor(props) {
@@ -48,7 +44,7 @@ class Header extends React.Component {
                   <NavLink href="/about">Om Knut</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/tags">Tags</NavLink>
+                  <NavLink href="/tags">Tema</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

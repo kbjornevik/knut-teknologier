@@ -21,9 +21,12 @@ const SinglePost = ({ data }) => {
                 <CardSubtitle>
                     <span className="text-info">{post.date}</span> by{" "}
                     <span className="text-info">{post.author}</span>
-                </CardSubtitle>
+                </CardSubtitle> 
+                Knut 1
                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+               
                 <ul className="post-tags">
+                KNUT 3
                      {post.tags.map(tag => (
                     <li key={tag}>
                      <Link to={`/tag/${slugify(tag)}`}>
