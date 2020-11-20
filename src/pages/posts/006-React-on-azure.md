@@ -29,8 +29,6 @@ Her er oppskriften for å sette opp og deploye løsningen.
 
 Opprett  web.config  i folder public med følgende innhold.
 
-[[webconfig](images/web_config.jpg)]
-![[binary](images/binary.jpg)]
 https://www.npmjs.com/package/gatsby-plugin-mdx
 
  artikkelen forklarer hvordan du skal være vert for din reageringsapp på azure app-tjenester. Forutsatt at du har npm og VS-kode installert på maskinen din, følger du trinnene nedenfor.
