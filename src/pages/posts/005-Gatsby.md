@@ -44,11 +44,6 @@ Når en oppretter en Markdown-fil, kan en inkludere et sett med nøkkelverdipar 
 Markdown standard syntaksen er rettet mot tekstbasert innhold. Dette endret seg ved introduksjon av MDX. MDX er et supersett av Markdown som lar oss legge inn JSX direkte i Markdown-filer.
 <a target="_blank" rel="noopener noreferrer" href= "https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby" > Link artikkel om MDX </a>
 
-src/markdown-pages/post-1.md
-_ _ _
-title: "Gatsby en statsik web server"
-date: 2020-12-30 07:00:00
-description: "Gatsby "
 
 > ## Fordeler med et statisk nettsted
 > 1. Bedre sikkerhet i forhold dynamiske nettsteder (dynamiske nettsteder har større risiko for nettangrep)
