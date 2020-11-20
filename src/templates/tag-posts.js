@@ -5,17 +5,17 @@ import Post from "../components/Post"
 
 const tagPosts = ({ data, pageContext }) => {
   const { tag } = pageContext
-  const { totalCount } = data.allMarkdownRemark
+  const { totalCount } = data.allMdx
   const pageHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}" `
 
   return (
     <Layout pageTitle={pageHeader}>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allMdx.edges.map(({ node }) => (
         <Post
           key={node.id}
-          slug={node.fields.slug}
+          slug={node.slug}
           title={node.frontmatter.title}
           author={node.frontmatter.author}
           date={node.frontmatter.date}
@@ -30,7 +30,7 @@ const tagPosts = ({ data, pageContext }) => {
 
 export const tagQuery = graphql`
   query($tag: String!) {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
@@ -51,9 +51,9 @@ export const tagQuery = graphql`
               }
             }
           }
-          fields {
-            slug
-          }
+          
+          slug
+          
           excerpt
         }
       }

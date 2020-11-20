@@ -4,6 +4,7 @@ date: 2018-12-02 08:00:00
 description: "Hello World"
 author: "Knut Bjørnevik"
 image: "../../images/binary.jpg"
+slug: second-post-html_Knut
 tags:
   - code
   - design

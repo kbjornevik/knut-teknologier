@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql, StaticQuery, Link } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
 
 const IndexPage = () => (
@@ -14,17 +14,18 @@ const IndexPage = () => (
         render={data => {
            return (
             <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
+              {data.allMdx.edges.map(({ node }) => (
                 <Post 
                   id = {node.id}
                   title={node.frontmatter.title}
                   author={node.frontmatter.author}
-                  slug={node.fields.slug}
+                  slug={node.slug}
                   date={node.frontmatter.date}
                   body={node.excerpt}
                   fluid={node.frontmatter.image.childImageSharp.fluid}
                   tags={node.frontmatter.tags}
                   />
+                  
               )
             )}
             </div>
@@ -37,7 +38,7 @@ const IndexPage = () => (
 
   const indexQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 4 ) 
      {
@@ -54,13 +55,12 @@ const IndexPage = () => (
             childImageSharp {
               fluid(maxWidth: 600) {
                 ...GatsbyImageSharpFluid
+                }
               }
             }
           }
-         }
-         fields {
           slug
-        }
+        
          excerpt
        }
  

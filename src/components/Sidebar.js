@@ -54,18 +54,20 @@ const Sidebar = () => (
           </CardTitle>
           <StaticQuery  query={sidebarQuery}  render={(data) => (
             <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
+              {data.allMdx.edges.map(({ node }) => (
                 <Card key={node.id}>
-                  <Link to={node.fields.slug}>
+                  <Link to={node.slug} >
                     <Img  className="card-image-top"
                       fluid={node.frontmatter.image.childImageSharp.fluid} />
+                  
                   </Link>
                   <CardBody>
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
-                     <Link to={node.fields.slug}>
-                        {node.frontmatter.title}
-                      </Link>
+                     <Link to={node.slug}>  </Link>
+                      
+                      <a href={node.slug}> {node.frontmatter.title} </a>
+                     
                     </CardTitle>
                   </CardBody>
                 </Card>
@@ -80,10 +82,10 @@ const Sidebar = () => (
   
   const sidebarQuery = graphql`
     query sidebarQuery {
-      allMarkdownRemark(
+      allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 4
-      ) {
+        limit: 6 ) 
+        {
         edges{
           node{
             id
@@ -94,13 +96,12 @@ const Sidebar = () => (
                 childImageSharp {
                   fluid(maxWidth: 300) {
                     ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
-            }
-            fields{
-              slug
-            }
+            slug
+            
           }
         }
       }

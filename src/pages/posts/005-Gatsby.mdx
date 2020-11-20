@@ -1,0 +1,44 @@
+---
+title: "Gatsby en statisk web server"
+date: 2020-10-30 07:00:00
+description: "Gatsby "
+author: "Knut Bjørnevik"
+image: "../../images/gatsbyjs.jpg"
+tags:
+  - Tekologi
+  - Gatsby
+  - Webserverss
+---
+
+>## Gatsby verktøy for generering av statiske Web sider
+Gatsby benyttes for å lage en statisk Web server. Den statiske delen av dette betyr at det Gatsby vil produsere ferdieg HTML-filer som vi laster opp til en server som brukeren deretter spør mot. Dette er det motsatte av et dynamisk nettsted hvor en må søke i en database eller gjøre noen programmering på selve serveren for å kunne betjene websidene dine. En Gatsby site har allerede forhåndskonfigurert alle HTML sidene og det er kun for brukeren å åpne siden.
+
+Et vanlig oppsette er å kjøre Gatsby lokalt på datamaskinen når man bygger et nettsted, og deretter genererer vi de endelige ferdige produktet som Gatsby vil spytte ut, som er et statisk Gatsby-nettsted. Gatsby vil generere HTML, CSS , JavaScript-bilder alle modluler vi trenger for at nettstedet vårt skal kjøre. Gatsby er et  verktøy som vil hjelpe oss med å bygge en web side.
+
+For å generere statiske web sider vil Gatsby bruke Node JS. Node kjører i et utviklingsmiljø på selve datamaskinen. Når sidene er generert trenger du ikke  Node JS på selve WEB-serveren.
+
+
+> ### Gatsby JS bruker GraphQL
+Sentralt i generering av web sider er GraphQL-spørringsspråket. Dette kan benyttes for å hente data fra hvor som helst. <a target="_blank" rel="noopener noreferrer" href= "https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql" > Introduksjon GraphQL</a>
+
+Det er mange alternativer for å laste inn data i React-komponenter. En av de mest populære og kraftigse av disse er en teknologi som heter GraphQL. GraphQL er utviklet av Facebook for å hjelpe utviklere med å hente nødvendige data i React-komponenter.
+GraphQL er et spørrespråk (QL-delen av navnet). Hvis du er kjent med SQL, fungerer det på en lignende måte men annen syntaks. Ved hjelp QL-syntaksen beskriver du dataene du vil ha i komponenten din.
+
+Gatsby bruker GraphQL for å aktivere side- og StaticQuery-komponenter for å erklære hvilke data de og deres underkomponenter trenger. Deretter gjør Gatsby disse dataene tilgjengelige i nettleseren når komponentene dine trenger det.
+
+
+> ### Markdown
+Markdown er et lett markeringsspråk med syntaks for formatering av ren tekst, opprettet i 2004 av John Gruber og Aaron Swartz. Markdown brukes ofte til formatering av readme-filer, til å skrive meldinger i online diskusjonsfora og til å lage rik tekst ved hjelp av en redigeringsprogramvare for ren tekst.
+
+<a  rel="noopener noreferrer" href= "007-markdown-mdx"> LINK Markdown og MDX </a>
+
+
+> ## Fordeler med et statisk nettsted
+> 1. Bedre sikkerhet i forhold dynamiske nettsteder (dynamiske nettsteder har større risiko for nettangrep)
+> 2. Forbedret ytelse for sluttbrukere sammenlignet med dynamiske nettsteder 
+> 3. Færre eller ingen avhengigheter av systemer som databaser eller andre applikasjonsservere 
+> 4. Kostnadsbesparelser ved bruk av skylagring, i motsetning til et vertsmiljø 
+
+
+> ## Ulemper med et statisk nettsted
+> 1. Dynamisk funksjonalitet må utføres på klientsiden

@@ -5,64 +5,70 @@ import { Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import  SEO from '../components/seo'
 import { slugify } from "../util/utilityFunctions"
 import Layout from "../components/layout"
-import Sidebar from "../components/Sidebar"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
+//import Sidebar from "../components/Sidebar"
+  //{post.node.frontmatter.title}    
+  //{post.node.frontmatter.title}
 
-const SinglePost = ({ data }) => {
-  const post = data.markdownRemark.frontmatter
+const SinglePost = ({ data, pageContext }) => {
+  //const post = data.allMdx.nodes.frontmatter
+  const post=data.mdx
   return (
-    <Layout>
-      <SEO title={post.title} />
-      <h1>{post.title} </h1>
-      
-             <Img   className="card-image-top"
-                fluid={post.image.childImageSharp.fluid}
+       <Layout>
+          <SEO title={post.frontmatter.title} />
+          <Card>
+          <h1>{post.frontmatter.title} </h1>
+          <Img   className="card-image-top"
+                fluid={post.frontmatter.image.childImageSharp.fluid}
                 />
-              <CardBody>
+         <CardBody>
                 <CardSubtitle>
-                    <span className="text-info">{post.date}</span> by{" "}
-                    <span className="text-info">{post.author}</span>
+                    <span className="text-info">{post.frontmatter.date}</span> skrevet av: {" "}
+                    <span className="text-info">{post.frontmatter.author}</span>
                 </CardSubtitle> 
-                Knut 1
-                <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-               
-                <ul className="post-tags">
-                KNUT 3
-                     {post.tags.map(tag => (
+                <MDXRenderer>{post.body}</MDXRenderer>
+          
+           <ul className="post-tags">
+                  {post.frontmatter.tags.map(tag => (
                     <li key={tag}>
                      <Link to={`/tag/${slugify(tag)}`}>
                        <Badge color="primary">{tag}</Badge>
                      </Link>
                     </li>
                    ))}
-                </ul>
-              </CardBody>
-
+            </ul>
+            </CardBody>
+            </Card>
       </Layout>
   )
 }
-
+//  allMdx(filter : {slug: { eq: $slug }} ) {
+  
 export const postQuery = graphql`
-  query blogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
-        title
-        author
-        tags
-        image {
-          childImageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid
-             }
+query blogPostBySlug($slug: String!) {
+  mdx(slug: {eq: $slug}){
+    frontmatter {
+      author
+      title
+      date(formatString: "YYYY-MM-DD")
+      tags
+      image {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
            }
-        }
-     }
-     fields{
-         slug
-     }
+         }
+      }
     }
+    fields {
+      slug
+    }
+    id
+    slug
+    body
   }
+}
 `
 
 export default SinglePost

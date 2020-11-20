@@ -10,8 +10,6 @@ tags:
   - Strava
 ---
 
-#Filefjell 
+Filefjell 
 Filefjell har endeløse vidder hvor en kan spaserer i timevis uten å treffe et menneske. Hver årstid har sine egne farger som her på høsten.
 Høsten er kort på fjellet og det gjelder å følge med når fargene skifter slik at en får med seg fargendringene fra grønt- gult til rødt
-
-console.log(`Leser First post`)
