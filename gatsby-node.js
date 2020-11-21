@@ -65,7 +65,7 @@ posts.forEach(({ node }) => {
       // passing slug for template to get post
       slug: node.slug
       // find author imageUrl from authors and pass it to the single post template
-   
+      
     },
   })
 })    
