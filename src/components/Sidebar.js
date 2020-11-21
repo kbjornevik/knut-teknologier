@@ -84,7 +84,7 @@ const Sidebar = () => (
     query sidebarQuery {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 6 ) 
+        limit: 5 ) 
         {
         edges{
           node{

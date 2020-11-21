@@ -20,7 +20,7 @@ const Footer = () => (
       <ul className="social-links-list">
         <li>
           <a
-            href="https://www.facebook.com/knut.bjornevik"
+            href="https://www.facebook.com"
             className="facebook"
             target="_blank"
             rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.instagram.com/knutbjornevik/"
+            href="https://www.instagram.com"
             className="instagram"
             target="_blank"
             rel="noopener noreferrer">
@@ -49,7 +49,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.strava.com/athletes/1874315"
+            href="https://www.Strava.com"
             className="strava"
             target="_blank"
             rel="noopener noreferrer"

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql , Link} from "gatsby"
 import Layout from "../components/layout"
-import dog from '../images/zwift.jpg';
+import dog from '../images/salty_egg.jpg';
 function BlogIndex({ data }) {
     const { edges: posts } = data.allMdx
     return (

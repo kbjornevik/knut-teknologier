@@ -11,13 +11,12 @@ import { MDXProvider } from "@mdx-js/react"
   //{post.node.frontmatter.title}    
   //{post.node.frontmatter.title}
 
-const SinglePost = ({ data, pageContext }) => {
+const SinglePost = ({ data }) => {
   //const post = data.allMdx.nodes.frontmatter
   const post=data.mdx
   return (
        <Layout>
           <SEO title={post.frontmatter.title} />
-          <Card>
           <h1>{post.frontmatter.title} </h1>
           <Img   className="card-image-top"
                 fluid={post.frontmatter.image.childImageSharp.fluid}
@@ -28,7 +27,7 @@ const SinglePost = ({ data, pageContext }) => {
                     <span className="text-info">{post.frontmatter.author}</span>
                 </CardSubtitle> 
                 <MDXRenderer>{post.body}</MDXRenderer>
-          
+           </CardBody>
            <ul className="post-tags">
                   {post.frontmatter.tags.map(tag => (
                     <li key={tag}>
@@ -38,8 +37,6 @@ const SinglePost = ({ data, pageContext }) => {
                     </li>
                    ))}
             </ul>
-            </CardBody>
-            </Card>
       </Layout>
   )
 }
