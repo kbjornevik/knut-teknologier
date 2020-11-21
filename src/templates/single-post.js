@@ -18,7 +18,8 @@ const SinglePost = ({ data }) => {
        <Layout>
           <SEO title={post.frontmatter.title} />
           <h1>{post.frontmatter.title} </h1>
-          <Img   className="card-image-top"
+          <Card>
+                <Img   className="card-image-top"
                 fluid={post.frontmatter.image.childImageSharp.fluid}
                 />
          <CardBody>
@@ -37,6 +38,7 @@ const SinglePost = ({ data }) => {
                     </li>
                    ))}
             </ul>
+            </Card>
       </Layout>
   )
 }

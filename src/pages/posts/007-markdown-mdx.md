@@ -17,7 +17,7 @@ tekst, opprettet i 2004 av John Gruber og Aaron Swartz. Markdown brukes
 ofte til formatering av readme-filer, til å skrive meldinger i online 
 diskusjonsfora og til å lage rik tekst ved hjelp av en 
 redigeringsprogramvare for ren tekst.
-![Chinese Salty Egg](../../images/salty_egg.jpg)
+![Skjermdump](../../images/markdown-eksempel.jpg)
 > ## Frontmatter for metadata i Markdown filer
 Når en oppretter en Markdown-fil, kan en inkludere et sett med nøkkelverdipar som kan brukes til å gi tilleggsdata som er relevante for bestemte sider i GraphQL-datalaget. Disse dataene kalles frontmatter og er betegnet med de tre streker i begynnelsen og slutten av blokken. Denne blokken blir analysert av gatsby-transformator-bemerkning som frontmaterie. GraphQL API vil gi nøkkelverdiparene som data i React-komponentene dine.
 
