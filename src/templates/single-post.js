@@ -67,7 +67,7 @@ const SinglePost = ({ data,pageContext }) => {
                     className="facebook"
                       target= "_blank"
                       rel= "noopener noreferrer">
-                      <FontAwesomeIcon icon={faFacebook} size="2x" />
+                     <FontAwesomeIcon icon={faFacebook} size="2x" />
                       </a>
                  </li>
               </ul>
