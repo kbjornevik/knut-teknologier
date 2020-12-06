@@ -10,7 +10,7 @@ tags:
   - Bergen CK
   - Strava 
 ---
-Zwift er syklistenes svar på e-Gaming. Dette er et virituelt flerspillers online sykling programm. Brukerne kan tråkke fysisk treningsprogram som gjør det mulig for brukere å samhandle, trene og konkurrere i en virtuell verden. 
+Zwift er syklistenes svar på e-Gaming. Dette er et virituelt online flerspiller program for syklister. Brukerne kan tråkke selvkomponerte eller ferdige treningsprogram. En kan trene og konkurrere i en virtuell verden. 
 Selskapet ansvarlig for Zwift er  Zwift Inc. det ble stiftet av Jon Mayfield, Eric Min, Scott Barger og Alarik Myrin i California, USA, i 2014.
 
 Alle som er litt aktive på Zwift har også en konto på zwiftpower.com. 

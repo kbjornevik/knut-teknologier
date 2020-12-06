@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Knut Bjørnevik  <kbjornevik@hotmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -12,6 +12,7 @@
     "@fortawesome/react-fontawesome": "^0.1.12",
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
+    "@mdx-js/tag": "^0.20.3",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.3",
     "gatsby": "^2.24.80",

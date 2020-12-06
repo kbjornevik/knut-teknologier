@@ -6,22 +6,14 @@ import  SEO from '../components/seo'
 import { slugify } from "../util/utilityFunctions"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebook,
-  faGoogle,
-  faInstagram,
-  faStrava
-  
-} from "@fortawesome/free-brands-svg-icons";
+  faStrava } from "@fortawesome/free-brands-svg-icons";
 import {
-  faMountain
-  
-} from "@fortawesome/free-solid-svg-icons";
+  faMountain } from "@fortawesome/free-solid-svg-icons";
 //import Sidebar from "../components/Sidebar"
-  //{post.node.frontmatter.title}    
-  //{post.node.frontmatter.title}
+  
 
 const SinglePost = ({ data,pageContext }) => {
   //const post = data.allMdx.nodes.frontmatter
@@ -59,7 +51,7 @@ const SinglePost = ({ data,pageContext }) => {
             <div className="text-center social-share-links">
               <ul>
                 <li><a 
-                    href={'https://www.facebook.com/sharer.php?=' 
+                    href={'https://www.facebook.com/sharer.php?u=' 
                     + baseUrl 
                     + pageContext.slug
                     
