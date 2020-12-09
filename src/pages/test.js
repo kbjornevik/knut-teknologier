@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql , Link} from "gatsby"
 import Layout from "../components/layout"
+import Header from "../components/header.js"
 import dog from '../images/salty_egg.jpg';
 function BlogIndex({ data }) {
     const { edges: posts } = data.allMdx
     return (
       
       <div>
+              <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <img src={dog} alt="Cute Pup" />
         Beskrivelse :  {data.site.siteMetadata.description}
         {posts.map(({ node }) => {

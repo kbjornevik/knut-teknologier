@@ -1,6 +1,6 @@
 ---
 title: "Third Post - CSS"
-date: 2018-12-03 09:00:00
+date: 2017-12-20 09:00:00
 description: "Hello World"
 author: "Knut Bjørnevik"
 image: "../../images/binary.jpg"

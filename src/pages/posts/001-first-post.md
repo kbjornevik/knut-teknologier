@@ -1,12 +1,12 @@
 ---
 title: "Filefjell i høstfarger"
-date: 2020-08-09 07:00:00
+date: 2020-11-12 07:00:00
 description: "Filefjell på høsttur."
 author: "Knut Bjørnevik"
 image: "../../images/filefjell_host.jpg"
 tags:
   - Filefjell
-  - Bergen CK
+  - BergenCK
   - Strava
 ---
 

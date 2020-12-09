@@ -1,13 +1,13 @@
 ---
 title: "Sykling på Zwift"
-date: 2019-10-10 07:00:00
+date: 2020-06-10 07:00:00
 description: "Hello World"
 author: "Knut Bjørnevik"
 image: "../../images/zwift.jpg"
 tags:
   - Sykkel
   - Zwift
-  - Bergen CK
+  - BergenCK
   - Strava 
 ---
 Zwift er syklistenes svar på e-Gaming. Dette er et virituelt online flerspiller program for syklister. Brukerne kan tråkke selvkomponerte eller ferdige treningsprogram. En kan trene og konkurrere i en virtuell verden. 
