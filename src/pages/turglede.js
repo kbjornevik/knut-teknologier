@@ -2,16 +2,16 @@ import React from "react"
 import Layout from "../components/layout"
 import Post from "../components/Post"
 import SEO from "../components/seo"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from  "gatsby"
 
 
-const SykkelPage =  () =>  (
+const TurgledePage =  () =>  (
 
 <Layout>
       <SEO title="Home" keywords ={['gatsby','application','react']} />
-      <h1>Sykkel tema</h1>
+      <h1>Ut på tur aldri sur</h1>
        <StaticQuery
-        query={SykkelQuery}
+        query={TurQuery}
         render={data => {
            return (
             <div>
@@ -39,11 +39,11 @@ const SykkelPage =  () =>  (
 
 
 
-const SykkelQuery = graphql`
+const TurQuery = graphql`
 query {
   allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: "Sykkel" } } }
+      filter: { frontmatter: { tags: { in: "Turglede" } } }
     ) {
       totalCount
       edges {
@@ -71,4 +71,4 @@ query {
     }
   }
 `
-export default SykkelPage
+export default TurgledePage

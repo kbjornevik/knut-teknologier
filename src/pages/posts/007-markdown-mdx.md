@@ -31,3 +31,6 @@ Standard Markdon har sine begrensinger og jeg har derfor oppgradert siten til å
 
 npm install gatsby-remark-images gatsby-plugin-sharp
 src/markdown-pages/post-1.md
+
+Lage grafer i MDX filer https://recharts.org/en-US/examples
+<a target="_blank" rel="noopener noreferrer" href= "https://recharts.org/" > Link artikkel om recharts </a>

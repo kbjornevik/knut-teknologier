@@ -49,7 +49,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.Strava.com"
+            href="https://www.strava.com/athletes/1874315"
             className="strava"
             target="_blank"
             rel="noopener noreferrer"
