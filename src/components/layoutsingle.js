@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./Footer"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import {Row,Col} from 'reactstrap'
 
 import "../styles/index.scss"

@@ -57,7 +57,7 @@ const Sidebar = () => (
               {data.allMdx.edges.map(({ node }) => (
                 <Card key={node.id}>
                   <Link to={node.slug} >
-                    <Img  className="card-image-top"
+                    <Img  className="card-image-top" 
                       fluid={node.frontmatter.image.childImageSharp.fluid} />
                   
                   </Link>
