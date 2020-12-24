@@ -67,6 +67,22 @@ const linedata = [
    'Tr_heim':0.15,
    'Dato':'12.12'}
 ,
+ { 'Kr_sand':0.20,
+   'Bergen':0.20,
+   'Oslo':0.20,
+   'Tromsø':0.15,
+   'Molde':0.15,
+   'Tr_heim':0.15,
+   'Dato':'25.12'}
+,
+ { 'Kr_sand':0.02,
+   'Bergen':0.02,
+   'Oslo':0.02,
+   'Tromsø':0.03,
+   'Molde':0.03,
+   'Tr_heim':0.03,
+   'Dato':'15.11'}
+,
  { 'Kr_sand':0.24,
    'Bergen':0.24,
    'Oslo':0.24,
@@ -98,6 +114,14 @@ const linedata = [
    'Molde':0.17,
    'Tr_heim':0.17,
    'Dato':'17.12'}
+,
+ { 'Kr_sand':0.02,
+   'Bergen':0.02,
+   'Oslo':0.02,
+   'Tromsø':0.03,
+   'Molde':0.03,
+   'Tr_heim':0.03,
+   'Dato':'16.11'}
 ,
  { 'Kr_sand':0.21,
    'Bergen':0.21,
@@ -319,5 +343,3 @@ const linedata = [
       < Line type = 'monotone' dataKey = 'Tromsø' stroke = '#038d05' />
       </ LineChart >) }
   export default LineChartPris;
-
-Added this new line
