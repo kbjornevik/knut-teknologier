@@ -319,3 +319,5 @@ const linedata = [
       < Line type = 'monotone' dataKey = 'Tromsø' stroke = '#038d05' />
       </ LineChart >) }
   export default LineChartPris;
+
+Added this new line
