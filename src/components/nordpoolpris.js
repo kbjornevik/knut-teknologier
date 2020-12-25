@@ -250,6 +250,14 @@ const linedata = [
    'Molde':0.15,
    'Tr_heim':0.15,
    'Dato':'25.12'}
+,
+ { 'Kr_sand':0.19,
+   'Bergen':0.19,
+   'Oslo':0.19,
+   'Tromsø':0.14,
+   'Molde':0.14,
+   'Tr_heim':0.14,
+   'Dato':'26.12'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
