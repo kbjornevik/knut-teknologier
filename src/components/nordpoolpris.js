@@ -9,14 +9,6 @@ const linedata = [
    'Tromsø':0.03,
    'Molde':0.03,
    'Tr_heim':0.03,
-   'Dato':'15.11'}
-,
- { 'Kr_sand':0.02,
-   'Bergen':0.02,
-   'Oslo':0.02,
-   'Tromsø':0.03,
-   'Molde':0.03,
-   'Tr_heim':0.03,
    'Dato':'16.11'}
 ,
  { 'Kr_sand':0.01,
@@ -332,7 +324,7 @@ const linedata = [
    'Dato':'25.12'}
  ] 
     const LineChartPris = ({ }) =>
-    {   return ( < LineChart width ={ 730}   height ={ 250} data ={ linedata} 
+    {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
       margin ={ { top: 5, right: 30, left: 20, bottom: 5 } }>
       < CartesianGrid strokeDasharray = '3 3' />  < XAxis dataKey = 'Dato' />  < YAxis datakey = 'Bergen' />  < Tooltip /> < Legend />
       < Line type = 'monotone' dataKey = 'Bergen' stroke = '#8884d8' />
