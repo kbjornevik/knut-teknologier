@@ -9,7 +9,7 @@ const linedata = [
    'Tromsø':0.06,
    'Molde':0.06,
    'Tr_heim':0.06,
-   'Dato':'25.11'}
+   'Dato':'11.25'}
 ,
  { 'Kr_sand':0.04,
    'Bergen':0.04,
@@ -17,7 +17,7 @@ const linedata = [
    'Tromsø':0.07,
    'Molde':0.07,
    'Tr_heim':0.07,
-   'Dato':'26.11'}
+   'Dato':'11.26'}
 ,
  { 'Kr_sand':0.08,
    'Bergen':0.08,
@@ -25,7 +25,7 @@ const linedata = [
    'Tromsø':0.09,
    'Molde':0.09,
    'Tr_heim':0.09,
-   'Dato':'27.11'}
+   'Dato':'11.27'}
 ,
  { 'Kr_sand':0.12,
    'Bergen':0.12,
@@ -33,7 +33,7 @@ const linedata = [
    'Tromsø':0.10,
    'Molde':0.10,
    'Tr_heim':0.10,
-   'Dato':'28.11'}
+   'Dato':'11.28'}
 ,
  { 'Kr_sand':0.14,
    'Bergen':0.14,
@@ -41,7 +41,7 @@ const linedata = [
    'Tromsø':0.11,
    'Molde':0.12,
    'Tr_heim':0.12,
-   'Dato':'29.11'}
+   'Dato':'11.29'}
 ,
  { 'Kr_sand':0.14,
    'Bergen':0.14,
@@ -49,7 +49,7 @@ const linedata = [
    'Tromsø':0.11,
    'Molde':0.11,
    'Tr_heim':0.11,
-   'Dato':'30.11'}
+   'Dato':'11.30'}
 ,
  { 'Kr_sand':0.16,
    'Bergen':0.16,
@@ -57,7 +57,7 @@ const linedata = [
    'Tromsø':0.12,
    'Molde':0.12,
    'Tr_heim':0.12,
-   'Dato':'01.12'}
+   'Dato':'12.01'}
 ,
  { 'Kr_sand':0.17,
    'Bergen':0.17,
@@ -65,7 +65,7 @@ const linedata = [
    'Tromsø':0.11,
    'Molde':0.11,
    'Tr_heim':0.11,
-   'Dato':'02.12'}
+   'Dato':'12.02'}
 ,
  { 'Kr_sand':0.18,
    'Bergen':0.18,
@@ -73,7 +73,7 @@ const linedata = [
    'Tromsø':0.11,
    'Molde':0.11,
    'Tr_heim':0.11,
-   'Dato':'03.12'}
+   'Dato':'12.03'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -81,7 +81,7 @@ const linedata = [
    'Tromsø':0.13,
    'Molde':0.13,
    'Tr_heim':0.13,
-   'Dato':'04.12'}
+   'Dato':'12.04'}
 ,
  { 'Kr_sand':0.21,
    'Bergen':0.21,
@@ -89,7 +89,7 @@ const linedata = [
    'Tromsø':0.12,
    'Molde':0.16,
    'Tr_heim':0.16,
-   'Dato':'05.12'}
+   'Dato':'12.05'}
 ,
  { 'Kr_sand':0.20,
    'Bergen':0.20,
@@ -97,7 +97,7 @@ const linedata = [
    'Tromsø':0.12,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'06.12'}
+   'Dato':'12.06'}
 ,
  { 'Kr_sand':0.18,
    'Bergen':0.18,
@@ -105,7 +105,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'07.12'}
+   'Dato':'12.07'}
 ,
  { 'Kr_sand':0.22,
    'Bergen':0.22,
@@ -113,7 +113,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'08.12'}
+   'Dato':'12.08'}
 ,
  { 'Kr_sand':0.34,
    'Bergen':0.34,
@@ -121,7 +121,7 @@ const linedata = [
    'Tromsø':0.13,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'09.12'}
+   'Dato':'12.09'}
 ,
  { 'Kr_sand':0.43,
    'Bergen':0.26,
@@ -129,7 +129,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'10.12'}
+   'Dato':'12.10'}
 ,
  { 'Kr_sand':0.24,
    'Bergen':0.24,
@@ -137,7 +137,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'11.12'}
+   'Dato':'12.11'}
 ,
  { 'Kr_sand':0.24,
    'Bergen':0.24,
@@ -153,7 +153,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'13.12'}
+   'Dato':'12.13'}
 ,
  { 'Kr_sand':0.24,
    'Bergen':0.24,
@@ -161,7 +161,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.16,
    'Tr_heim':0.16,
-   'Dato':'14.12'}
+   'Dato':'12.14'}
 ,
  { 'Kr_sand':0.24,
    'Bergen':0.24,
@@ -169,7 +169,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.19,
    'Tr_heim':0.19,
-   'Dato':'15.12'}
+   'Dato':'12.15'}
 ,
  { 'Kr_sand':0.25,
    'Bergen':0.25,
@@ -177,7 +177,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.21,
    'Tr_heim':0.21,
-   'Dato':'16.12'}
+   'Dato':'12.16'}
 ,
  { 'Kr_sand':0.23,
    'Bergen':0.23,
@@ -185,7 +185,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'17.12'}
+   'Dato':'12.17'}
 ,
  { 'Kr_sand':0.21,
    'Bergen':0.21,
@@ -193,7 +193,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'18.12'}
+   'Dato':'12.18'}
 ,
  { 'Kr_sand':0.18,
    'Bergen':0.18,
@@ -201,7 +201,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'19.12'}
+   'Dato':'12.19'}
 ,
  { 'Kr_sand':0.16,
    'Bergen':0.16,
@@ -209,7 +209,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'20.12'}
+   'Dato':'12.20'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -217,7 +217,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'21.12'}
+   'Dato':'12.21'}
 ,
  { 'Kr_sand':0.17,
    'Bergen':0.17,
@@ -225,7 +225,7 @@ const linedata = [
    'Tromsø':0.13,
    'Molde':0.13,
    'Tr_heim':0.13,
-   'Dato':'22.12'}
+   'Dato':'12.22'}
 ,
  { 'Kr_sand':0.20,
    'Bergen':0.20,
@@ -233,7 +233,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'23.12'}
+   'Dato':'12.23'}
 ,
  { 'Kr_sand':0.17,
    'Bergen':0.17,
@@ -241,7 +241,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'24.12'}
+   'Dato':'12.24'}
 ,
  { 'Kr_sand':0.20,
    'Bergen':0.20,
@@ -249,7 +249,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'25.12'}
+   'Dato':'12.25'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -257,7 +257,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'26.12'}
+   'Dato':'12.26'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
