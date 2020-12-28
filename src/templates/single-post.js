@@ -6,6 +6,7 @@ import  SEO from '../components/seo'
 import { slugify } from "../util/utilityFunctions"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import ReactDisqusComments from 'react-disqus-comments';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebook,
@@ -43,6 +44,15 @@ const SinglePost = ({ data,pageContext }) => {
                     </li>
                    ))}
             </ul>
+            </Card>
+            <Card>
+               <ReactDisqusComments
+                      shortname="https-knutteknologier-gtsb-io"
+                      identifier={post.id}
+                      title={post.frontmatter.title}
+                      url={post.url}
+                      category_id={post.category_id}
+               />
             </Card>
             <Card>
             <h3 className="text-center">
