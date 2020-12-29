@@ -3,157 +3,13 @@ import { render } from 'react-dom';
 import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'recharts';
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
- { 'Kr_sand':0.12,
-   'Bergen':0.12,
-   'Oslo':0.12,
-   'Tromsø':0.10,
-   'Molde':0.10,
-   'Tr_heim':0.10,
-   'Dato':'28.11'}
-,
- { 'Kr_sand':0.14,
-   'Bergen':0.14,
-   'Oslo':0.14,
-   'Tromsø':0.11,
-   'Molde':0.12,
-   'Tr_heim':0.12,
-   'Dato':'29.11'}
-,
- { 'Kr_sand':0.14,
-   'Bergen':0.14,
-   'Oslo':0.14,
-   'Tromsø':0.11,
-   'Molde':0.11,
-   'Tr_heim':0.11,
-   'Dato':'30.11'}
-,
- { 'Kr_sand':0.16,
-   'Bergen':0.16,
-   'Oslo':0.16,
-   'Tromsø':0.12,
-   'Molde':0.12,
-   'Tr_heim':0.12,
-   'Dato':'01.12'}
-,
- { 'Kr_sand':0.17,
-   'Bergen':0.17,
-   'Oslo':0.17,
-   'Tromsø':0.11,
-   'Molde':0.11,
-   'Tr_heim':0.11,
-   'Dato':'02.12'}
-,
- { 'Kr_sand':0.18,
-   'Bergen':0.18,
-   'Oslo':0.18,
-   'Tromsø':0.11,
-   'Molde':0.11,
-   'Tr_heim':0.11,
-   'Dato':'03.12'}
-,
- { 'Kr_sand':0.19,
-   'Bergen':0.19,
-   'Oslo':0.19,
-   'Tromsø':0.13,
-   'Molde':0.13,
-   'Tr_heim':0.13,
-   'Dato':'04.12'}
-,
- { 'Kr_sand':0.21,
-   'Bergen':0.21,
-   'Oslo':0.21,
-   'Tromsø':0.12,
-   'Molde':0.16,
-   'Tr_heim':0.16,
-   'Dato':'05.12'}
-,
- { 'Kr_sand':0.20,
-   'Bergen':0.20,
-   'Oslo':0.20,
-   'Tromsø':0.12,
-   'Molde':0.15,
-   'Tr_heim':0.15,
-   'Dato':'06.12'}
-,
- { 'Kr_sand':0.18,
-   'Bergen':0.18,
-   'Oslo':0.18,
-   'Tromsø':0.14,
-   'Molde':0.14,
-   'Tr_heim':0.14,
-   'Dato':'07.12'}
-,
- { 'Kr_sand':0.22,
-   'Bergen':0.22,
-   'Oslo':0.22,
-   'Tromsø':0.14,
-   'Molde':0.14,
-   'Tr_heim':0.14,
-   'Dato':'08.12'}
-,
- { 'Kr_sand':0.34,
-   'Bergen':0.34,
-   'Oslo':0.34,
-   'Tromsø':0.13,
-   'Molde':0.15,
-   'Tr_heim':0.15,
-   'Dato':'09.12'}
-,
- { 'Kr_sand':0.43,
-   'Bergen':0.26,
-   'Oslo':0.43,
-   'Tromsø':0.14,
-   'Molde':0.15,
-   'Tr_heim':0.15,
-   'Dato':'10.12'}
-,
- { 'Kr_sand':0.24,
-   'Bergen':0.24,
-   'Oslo':0.24,
-   'Tromsø':0.15,
-   'Molde':0.15,
-   'Tr_heim':0.15,
-   'Dato':'11.12'}
-,
- { 'Kr_sand':0.24,
-   'Bergen':0.24,
-   'Oslo':0.24,
-   'Tromsø':0.15,
-   'Molde':0.15,
-   'Tr_heim':0.15,
-   'Dato':'12.12'}
-,
- { 'Kr_sand':0.24,
-   'Bergen':0.24,
-   'Oslo':0.24,
-   'Tromsø':0.15,
-   'Molde':0.17,
-   'Tr_heim':0.17,
-   'Dato':'13.12'}
-,
- { 'Kr_sand':0.24,
-   'Bergen':0.24,
-   'Oslo':0.24,
-   'Tromsø':0.15,
-   'Molde':0.16,
-   'Tr_heim':0.16,
-   'Dato':'14.12'}
-,
- { 'Kr_sand':0.24,
-   'Bergen':0.24,
-   'Oslo':0.24,
-   'Tromsø':0.16,
-   'Molde':0.19,
-   'Tr_heim':0.19,
-   'Dato':'15.12'}
-,
  { 'Kr_sand':0.25,
    'Bergen':0.25,
    'Oslo':0.25,
    'Tromsø':0.16,
    'Molde':0.21,
    'Tr_heim':0.21,
-   'Dato':'16.12'}
+   'Dato':'12-16'}
 ,
  { 'Kr_sand':0.23,
    'Bergen':0.23,
@@ -161,7 +17,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'17.12'}
+   'Dato':'12-17'}
 ,
  { 'Kr_sand':0.21,
    'Bergen':0.21,
@@ -169,7 +25,7 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'18.12'}
+   'Dato':'12-18'}
 ,
  { 'Kr_sand':0.18,
    'Bergen':0.18,
@@ -177,7 +33,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'19.12'}
+   'Dato':'12-19'}
 ,
  { 'Kr_sand':0.16,
    'Bergen':0.16,
@@ -185,7 +41,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'20.12'}
+   'Dato':'12-20'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -193,7 +49,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'21.12'}
+   'Dato':'12-21'}
 ,
  { 'Kr_sand':0.17,
    'Bergen':0.17,
@@ -201,7 +57,7 @@ const linedata = [
    'Tromsø':0.13,
    'Molde':0.13,
    'Tr_heim':0.13,
-   'Dato':'22.12'}
+   'Dato':'12-22'}
 ,
  { 'Kr_sand':0.20,
    'Bergen':0.20,
@@ -209,7 +65,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'23.12'}
+   'Dato':'12-23'}
 ,
  { 'Kr_sand':0.17,
    'Bergen':0.17,
@@ -217,7 +73,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'24.12'}
+   'Dato':'12-24'}
 ,
  { 'Kr_sand':0.20,
    'Bergen':0.20,
@@ -225,7 +81,7 @@ const linedata = [
    'Tromsø':0.15,
    'Molde':0.15,
    'Tr_heim':0.15,
-   'Dato':'25.12'}
+   'Dato':'12-25'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -233,7 +89,7 @@ const linedata = [
    'Tromsø':0.14,
    'Molde':0.14,
    'Tr_heim':0.14,
-   'Dato':'26.12'}
+   'Dato':'12-26'}
 ,
  { 'Kr_sand':0.08,
    'Bergen':0.08,
@@ -241,7 +97,7 @@ const linedata = [
    'Tromsø':0.08,
    'Molde':0.08,
    'Tr_heim':0.08,
-   'Dato':'27.12'}
+   'Dato':'12-27'}
 ,
  { 'Kr_sand':0.19,
    'Bergen':0.19,
@@ -249,7 +105,7 @@ const linedata = [
    'Tromsø':0.13,
    'Molde':0.13,
    'Tr_heim':0.13,
-   'Dato':'28.12'}
+   'Dato':'12-28'}
 ,
  { 'Kr_sand':0.23,
    'Bergen':0.23,
@@ -257,12 +113,13 @@ const linedata = [
    'Tromsø':0.16,
    'Molde':0.17,
    'Tr_heim':0.17,
-   'Dato':'29.12'}
+   'Dato':'12-29'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
       margin ={ { top: 5, right: 30, left: 20, bottom: 5 } }>
-      < CartesianGrid strokeDasharray = '3 3' />  < XAxis dataKey = 'Dato' />  < YAxis datakey = 'Bergen' />  < Tooltip /> < Legend />
+      < CartesianGrid strokeDasharray = '3 3' /> 
+      < XAxis  tick={{fontSize: 8}} dataKey = 'Dato' />  < YAxis datakey = 'Bergen' />  < Tooltip /> < Legend />
       < Line type = 'monotone' dataKey = 'Bergen' stroke = '#8884d8' />
       < Line type = 'monotone' dataKey = 'Kr_sand' stroke = '#82ca9d' />
       < Line type = 'monotone' dataKey = 'Oslo' stroke = '#ab3322' />
