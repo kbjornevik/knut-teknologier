@@ -56,23 +56,23 @@ exports.onCreateNode =  ({ node, actions }) => {
 
     
     const posts = res.data.allMdx.edges
-// Create single blog post
-posts.forEach(({ node }) => {
-  createPage({
-    path: node.slug,
-    component: templates.singlepost,
-    context: {
-      // passing slug for template to get post
-      slug: node.slug
-      // find author imageUrl from authors and pass it to the single post template
-      
-    },
-  })
-})    
+      // Create single blog post
+      posts.forEach(({ node }) => {
+        createPage({
+          path: node.slug,
+          component: templates.singlepost,
+          context: {
+            // passing slug for template to get post
+            slug: node.slug
+            // find author imageUrl from authors and pass it to the single post template
+            
+          },
+        })
+      })    
         // Get all Tags 
-        let tags = []
+      let tags = []
 
-        _.each(posts, edges => {
+       _.each(posts, edges => {
           if (_.get(edges, "node.frontmatter.tags")) {
             tags = tags.concat(edges.node.frontmatter.tags)
           }

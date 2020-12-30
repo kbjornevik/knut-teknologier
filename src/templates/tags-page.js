@@ -8,7 +8,6 @@ const tagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
   return (
     <Layout pageTitle="All tema">
-      Test
       <SEO title="All tema" keywords={["tags", "topics"]} />
       <ul>
         {tags.map(tag => (
