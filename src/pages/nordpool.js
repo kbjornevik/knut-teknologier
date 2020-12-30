@@ -11,7 +11,7 @@ const NordpoolPage = () => (
     <Container>
     <Card bg="light"  border="success"  > 
         <CardBody>
-        <CardTitle>Nordpool pris siste 30 dager </CardTitle>
+        <CardTitle>Nordpool pris siste 14 dager </CardTitle>
            <LineChartPris/>
         </CardBody>
     </Card>
