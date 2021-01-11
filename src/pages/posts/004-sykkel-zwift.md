@@ -1,6 +1,6 @@
 ---
 title: "Sykling på Zwift"
-date: 2020-06-10 07:00:00
+date: 2020-12-10 07:00:00
 description: "Hello World"
 author: "Knut Bjørnevik"
 image: "../../images/zwift.jpg"
@@ -10,6 +10,7 @@ tags:
   - BergenCK
   - Strava 
 ---
+# Zwift
 Zwift er syklistenes svar på e-Gaming. Dette er et virituelt online flerspiller program for syklister. Brukerne kan tråkke selvkomponerte eller ferdige treningsprogram. En kan trene og konkurrere i en virtuell verden. 
 Selskapet ansvarlig for Zwift er  Zwift Inc. det ble stiftet av Jon Mayfield, Eric Min, Scott Barger og Alarik Myrin i California, USA, i 2014.
 

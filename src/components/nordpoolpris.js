@@ -125,7 +125,7 @@ const linedata = [
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
-      margin ={ { top: 5, right: 30, left: 20, bottom: 5 } }>
+      margin ={ { top: 5, right: 100, left: 20, bottom: 5 } }>
       < CartesianGrid strokeDasharray = '3 3' /> 
       < XAxis  tick={{fontSize: 8}} dataKey = 'Dato' />  < YAxis datakey = 'Bergen' />  < Tooltip /> < Legend />
       < Line type = 'monotone' dataKey = 'Bergen' stroke = '#8884d8' />
