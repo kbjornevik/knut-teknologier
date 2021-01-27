@@ -7,33 +7,38 @@ import {
   CardTitle,
   CardBody,
   Form,
+  Image,
   FormGroup,
   Input,
+  Badge
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
+import KnutImg from "../images/knutpaaprest.jpg"
 
 
 const Sidebar = () => (
     <div>
        <Card>
         <CardBody>
-          <CardTitle className="text-center text-uppercase mb-3">
-            Nyhetsbrev
+            <CardTitle className="text-center  mb-3">
+            <div> <img src={KnutImg} rounded style={{ width: "50%" }} /></div>
+             IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
           <Form className="text-center">
             <FormGroup>
-              <Input
-                type="email"
-                name="email"
-                placeholder="Din email addresse..."
-              />
+            
             </FormGroup>
-            <Button className="btn btn-outline-success text-uppercase">
-              Abonner
+            <Button className="btn btn-success"  href="../001-om-knut">
+              Knut Bjørnevik
             </Button>
+           {/*} <Link to = "../001-om-knut">
+                <Badge color="primary" className="text-uppercase">
+                 OM KNUT  </Badge>
+            </Link>*/}
           </Form>
         </CardBody>
       </Card>
+      {/* ---------------  Bergen CK ------------------------------------------------- */}
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase">
