@@ -3,14 +3,6 @@ import { render } from 'react-dom';
 import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'recharts';
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
- { 'Kr_sand':0.56,
-   'Bergen':0.49,
-   'Oslo':0.59,
-   'Tromsø':0.24,
-   'Molde':0.24,
-   'Tr_heim':0.24,
-   'Dato':'04-14'}
-,
  { 'Kr_sand':0.60,
    'Bergen':0.54,
    'Oslo':0.61,
@@ -122,6 +114,14 @@ const linedata = [
    'Molde':0.58,
    'Tr_heim':0.58,
    'Dato':'04-28'}
+,
+ { 'Kr_sand':0.53,
+   'Bergen':0.53,
+   'Oslo':0.53,
+   'Tromsø':0.51,
+   'Molde':0.53,
+   'Tr_heim':0.53,
+   'Dato':'04-29'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
