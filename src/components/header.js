@@ -1,14 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Link} from "gatsby"
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink } from "reactstrap"
+//import {   Collapse,  Navbar,  NavbarToggler,  NavbarBrand,  Nav,DropdownMenu,DropdownItem,  NavItem,  NavLink } from "reactstrap"
+import { Container, Navbar,Nav,NavDropdown } from 'react-bootstrap'
 
 class Header extends React.Component {
   constructor(props) {
@@ -27,36 +22,31 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        
-       <Navbar color="Light" fixed="top" light expand="md">
-          <div className="container">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-              <NavItem>
-                  <NavLink href="/turglede">Turglede</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/kraft">Kraft</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/nordpool">Nordpool pris</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/sykkel">Sykkel</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="../001-om-knut">Om Knut</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/tags">Tema</NavLink>
-                </NavItem>
-              </Nav>
-            </Collapse>
-            </div>
+      <Container>
+       <Navbar expand="md" color="Light" fixed="top" light >
+          <Navbar.Brand href="/">{this.props.siteTitle}</Navbar.Brand>
+            <Navbar.Toggle onClick={this.toggle} />
+            <Navbar.Collapse isOpen={this.state.isOpen}  arie-controls="navbarResponsive">
+              <Nav  as="ul" className="ml-auto" >
+              <Nav.Item as="li">  <Link href="/turglede" className="nav-link" activeClassName="active">Turglede</Link>        </Nav.Item>
+         
+              <NavDropdown title="Kraft" id="nav-dropdown">
+                    <NavDropdown.Item href="/nordpool" className="nav-link">Nordpool pris</NavDropdown.Item>
+                    <NavDropdown.Item href="/kraft" className="nav-link"> Kraft</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Item as="li">  <Link href="/sykkel" className="nav-link">Sykkel</Link> </Nav.Item>
+              
+              <NavDropdown title="Om Siden" id="nav-dropdown">
+                    <NavDropdown.Item href="/about" className="nav-link">About site</NavDropdown.Item>
+                    <NavDropdown.Item href="../001-om-knut" className="nav-link"> Om Knut</NavDropdown.Item>
+                    <NavDropdown.Item href="/tags" className="nav-link"> Tema/Tags</NavDropdown.Item>
+
+              </NavDropdown>
+            </Nav>
+            </Navbar.Collapse>
+            
           </Navbar>
-       
+       </Container>
       </div>
     );
   }

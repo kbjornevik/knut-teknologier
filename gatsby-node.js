@@ -14,7 +14,7 @@ exports.onCreateNode =  ({ node, actions }) => {
     const { createNodeField } = actions
     if (node.internal.type === "Mdx") {
       const slugFromTitle = slugify(node.frontmatter.title)
-      console.log(slugFromTitle)
+      console.log('Lager nytt felt Slug from Tile: :', slugFromTitle)
       createNodeField({
         node,
         name: "slug",

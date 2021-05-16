@@ -1,6 +1,6 @@
 ---
 title: "Virituell sykling og trening"
-date: 2021-10-10 07:00:00
+date: 2020-10-10 07:00:00
 description: "Hvilken Virtuell treningsapp skal jeg benytte "
 author: "Knut Bjørnevik"
 image: "../../images/zwift.jpg"
