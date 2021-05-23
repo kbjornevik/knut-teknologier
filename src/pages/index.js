@@ -4,10 +4,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
-
+import Helmet from 'react-helmet';
 const IndexPage = () => (
   <Layout>
       <SEO title="Home Knut Bjørnevik" keywords ={['gatsby','application','react']} />
+      <Helmet><meta name="google-site-verification" content="e0yEls2hQj6pMEWs6ZE9tj1gDz2qnv3pItdcizydiIk" />
+      </Helmet>
       <h1>Knut's temaer</h1>
        <StaticQuery
         query={indexQuery}
