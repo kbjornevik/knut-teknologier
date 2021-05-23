@@ -7,7 +7,7 @@ import Post from "../components/Post"
 
 const IndexPage = () => (
   <Layout>
-      <SEO title="Home" keywords ={['gatsby','application','react']} />
+      <SEO title="Home Knut Bjørnevik" keywords ={['gatsby','application','react']} />
       <h1>Knut's temaer</h1>
        <StaticQuery
         query={indexQuery}

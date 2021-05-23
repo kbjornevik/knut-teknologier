@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Knut's Gatsby `,
-    description: ` Knut Bjørnevik med ulke tema som intresserer ham, Filefjell, Sykkel, Teknologi`,
+    title: `Knut Bjørnevik `,
+    description: ` Knut Bjørnevik med ulike tema som intresserer ham, Filefjell, Sykkel, IT-Teknologi`,
     author: `kbjornevik@hotmail.com`,
+    keywords: `Ut på Tur, Strava, Sykkel, Fjell,Filefjell`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
