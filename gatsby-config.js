@@ -61,7 +61,13 @@ module.exports = {
       ],
        },
     },
-  
+    {resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host:   `https://knutteknologier.gtsb.io/`,
+        sitemap:   `https://knutteknologier.gtsb.io/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
  
   ],
 }
