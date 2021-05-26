@@ -9,7 +9,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sitemap',
+    { resolve: 'gatsby-plugin-sitemap',
+    options:{ output: '/sitemap.xml'}
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
