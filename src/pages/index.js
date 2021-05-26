@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
       <SEO title="Home Knut Bjørnevik" keywords ={['gatsby','application','react']} />
       <Helmet>
-         <meta name="google-site-verification" content="e0yEls2hQj6pMEWs6ZE9tj1gDz2qnv3pItdcizydiIk" />
+         <meta name="google-site-verification" content="uxSz9Q95B4f6cnIDuVhrM_rRiprt3jDyyyUTglgNATg" />
          <meta name="x-robots-tag"  content="allow"/>
          <meta name="robots" content="allow"/>
       </Helmet>
