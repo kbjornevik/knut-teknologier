@@ -4,7 +4,7 @@ module.exports = {
     description: ` Knut Bjørnevik med ulike tema som intresserer ham, Filefjell, Sykkel, IT-Teknologi`,
     author: `kbjornevik@hotmail.com`,
     keywords: `Ut på Tur, Strava, Sykkel, Fjell,Filefjell`,
-    siteUrl: `https://knutteknologier.gtsb.io/`,
+    siteUrl: `https://kbjornevikgatsby.netlify.app/`,
 
   },
   plugins: [
@@ -65,9 +65,11 @@ module.exports = {
     },
     {resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host:   `https://knutteknologier.gtsb.io/`,
-        sitemap:   `https://knutteknologier.gtsb.io/sitemap.xml`,
+        host:   `https://kbjornevikgatsby.netlify.app/`,
+        sitemap:   `https://kbjornevikgatsby.netlify.app/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
+
+        
       }
     },
  
