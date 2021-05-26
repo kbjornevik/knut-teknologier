@@ -6,14 +6,6 @@ const linedata = [
  { 'Kr_sand':0.54,
    'Bergen':0.54,
    'Oslo':0.54,
-   'Tromsø':0.40,
-   'Molde':0.40,
-   'Tr_heim':0.40,
-   'Dato':'05-11'}
-,
- { 'Kr_sand':0.54,
-   'Bergen':0.54,
-   'Oslo':0.54,
    'Tromsø':0.39,
    'Molde':0.39,
    'Tr_heim':0.39,
@@ -122,6 +114,14 @@ const linedata = [
    'Molde':0.35,
    'Tr_heim':0.35,
    'Dato':'05-25'}
+,
+ { 'Kr_sand':0.52,
+   'Bergen':0.52,
+   'Oslo':0.52,
+   'Tromsø':0.23,
+   'Molde':0.31,
+   'Tr_heim':0.31,
+   'Dato':'05-26'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
