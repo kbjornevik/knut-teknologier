@@ -1,36 +1,36 @@
 import React from "react"
 import Layout from "../components/layout"
 import Post from "../components/Post"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 
 
 const SykkelPage =  () =>  (
 
 <Layout>
-      <SEO title="Home" keywords ={['gatsby','application','react']} />
-      <h1>Sykkel tema</h1>
+      <Seo title="Home" keywords ={['Sykkel','Bergen CK Veteran','Zwift','WATT']} />
+      <h1>Sykkel med Knut</h1>
        <StaticQuery
         query={SykkelQuery}
         render={data => {
            return (
-            <div>
-              {data.allMdx.edges.map(({ node }) => (
-                <Post 
-                  id = {node.id}
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  slug={node.slug}
-                  date={node.frontmatter.date}
-                  body={node.excerpt}
-                  fluid={node.frontmatter.image.childImageSharp.fluid}
-                  tags={node.frontmatter.tags}
-                  />
-                  
-              )
-            )}
-            </div>
-          )
+             <div>
+               {data.allMdx.edges.map(({ node }) => (
+                 <Post 
+                   id = {node.id}
+                   title={node.frontmatter.title}
+                   author={node.frontmatter.author}
+                   slug={node.slug}
+                   date={node.frontmatter.date}
+                   body={node.excerpt}
+                   fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                   tags={node.frontmatter.tags}
+                   />
+                   
+               )
+             )}
+             </div>
+           );
          }}
         />
         
@@ -39,36 +39,31 @@ const SykkelPage =  () =>  (
 
 
 
-const SykkelQuery = graphql`
-query {
+const SykkelQuery = graphql`{
   allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: "Sykkel" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM Do YYYY")
-            author
-            tags
-            image {
-              childImageSharp {
-                fluid(maxWidth: 650, maxHeight: 371) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+    sort: {fields: [frontmatter___date], order: DESC}
+    filter: {frontmatter: {tags: {in: "Sykkel"}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM Do YYYY")
+          author
+          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800,  layout: CONSTRAINED)
             }
           }
-          
-          slug
-          
-          excerpt
         }
+        slug
+        excerpt
       }
     }
   }
+}
 `
 export default SykkelPage

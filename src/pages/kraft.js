@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layoutsingle"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const KraftPage = () => (
   <Layout>
-        <SEO title="Kraft" />
+        <Seo title="Kraft" />
         
        <iframe title="Power BI report med strøm" 
               width="800" 

@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/Post"
+// gatsbyImageData(width: 650, height: 371, layout: CONSTRAINED)
+
 
 const tagPosts = ({ data, pageContext }) => {
   const { tag } = pageContext
@@ -21,44 +23,40 @@ const tagPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
+          fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
         />
       ))}
     </Layout>
-  )
+  );
 }
 
-export const tagQuery = graphql`
-  query($tag: String!) {
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM Do YYYY")
-            author
-            tags
-            image {
-              childImageSharp {
-                fluid(maxWidth: 650, maxHeight: 371) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const tagQuery = graphql`query ($tag: String!) {
+  allMdx(
+    sort: {fields: [frontmatter___date], order: DESC}
+    filter: {frontmatter: {tags: {in: [$tag]}}}, limit: 4
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM Do YYYY")
+          author
+          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
+             
             }
           }
-          
-          slug
-          
-          excerpt
         }
+        slug
+        excerpt
       }
     }
   }
+}
 `
 
 export default tagPosts

@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import{Container,Card,CardBody,CardTitle } from 'reactstrap'
 import LineChartPris from "../components/nordpoolpris.js"
 const NordpoolPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     
     <Container>
     <Card bg="light"  border="success"  > 

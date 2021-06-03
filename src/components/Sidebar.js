@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import {
   Button,
   Card,
@@ -60,10 +60,12 @@ const Sidebar = () => (
           <StaticQuery  query={sidebarQuery}  render={(data) => (
             <div>
               {data.allMdx.edges.map(({ node }) => (
-                <Card key={node.id}>
-                  <Link to={`../${node.slug}`}>
-                    <Img  className="card-image-top" 
-                      fluid={node.frontmatter.image.childImageSharp.fluid} />
+              
+                <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
+                  <Link to = {`/${node.slug}`}>
+                    <GatsbyImage style={{marginTop:"10px"}}
+                      image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                      className="card-image-top" />
                   
                   </Link>
                   <CardBody>
@@ -85,31 +87,24 @@ const Sidebar = () => (
     </div>
   )
   
-  const sidebarQuery = graphql`
-    query sidebarQuery {
-      allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-        limit: 5 ) 
-        {
-        edges{
-          node{
-            id
-            frontmatter{
-              title
-              date(formatString: "DD-MM-YYYY")
-              image{
-                childImageSharp {
-                  fluid(maxWidth: 300) {
-                    ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
-            slug
-            
+  const sidebarQuery = graphql`query sidebarQuery {
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 5) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD-MM-YYYY")
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 300, layout: CONSTRAINED)
+            }
           }
         }
+        slug
       }
     }
-  `
+  }
+}
+`
   export default Sidebar

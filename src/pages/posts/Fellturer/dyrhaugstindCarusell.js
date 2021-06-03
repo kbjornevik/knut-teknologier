@@ -160,7 +160,7 @@ const Example = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} class="img-rounded" height="400" class="mx-auto d-block"/>
+        <img src={item.src} alt={item.altText} class="img-rounded mx-auto d-block" height="400"/>
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );

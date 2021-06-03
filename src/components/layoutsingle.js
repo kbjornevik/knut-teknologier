@@ -8,10 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 import Footer from "./Footer"
 import {Row,Col} from 'reactstrap'
-
+import CustomNavbar from "./NavBar"
 import "../styles/index.scss"
 
 const Layout = ({ children }) => {
@@ -27,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <CustomNavbar siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="container" id="content">
         <Row>
           <Col md="10">{children}</Col>

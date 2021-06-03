@@ -1,78 +1,76 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
 import Helmet from 'react-helmet';
+import { Badge} from "reactstrap"
+
 const IndexPage = () => (
   <Layout>
-      <SEO title="Home Knut Bjørnevik" keywords ={['gatsby','application','react']} />
+      <Seo title="Home Knut Bjørnevik" keywords ={['sykkel','fjelltur','gatsby','react']} />
       <Helmet>
          <meta name="google-site-verification" content="uxSz9Q95B4f6cnIDuVhrM_rRiprt3jDyyyUTglgNATg" />
          <meta name="x-robots-tag"  content="allow"/>
          <meta name="robots" content="allow"/>
       </Helmet>
-      <h1>Knut's temaer</h1>
+      <h1>Knut's legendariske tema </h1>
+
+      <Badge color="danger">Danger</Badge>
        <StaticQuery
         query={indexQuery}
         render={data => {
            return (
-            <div>
-              {data.allMdx.edges.map(({ node }) => (
-                <Post 
-                  id = {node.id}
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  slug={node.slug}
-                  date={node.frontmatter.date}
-                  body={node.excerpt}
-                  fluid={node.frontmatter.image.childImageSharp.fluid}
-                  tags={node.frontmatter.tags}
-                  />
-                  
-              )
-            )}
-            </div>
-          )
+             <div>
+               {data.allMdx.edges.map(({ node }) => (
+                 <Post 
+                   id = {node.id}
+                   title={node.frontmatter.title}
+                   author={node.frontmatter.author}
+                   slug={node.slug}
+                   date={node.frontmatter.date}
+                   body={node.excerpt}
+                   fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                   tags={node.frontmatter.tags}
+             
+                   />
+                   
+               )
+             )}
+             </div>
+           );
          }}
         />
         
     </Layout>
   )
 
-  const indexQuery = graphql`
-  query {
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 4 ) 
-     {
-     totalCount
-     edges {
-       node {
-         id
-         frontmatter {
-           title
-           date(formatString: "YYYY Do MM")
-           author
-           tags
-           image {
+  const indexQuery = graphql`{
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 4) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "YYYY Do MM")
+          author
+          tags
+          image {
             childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-                }
-              }
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
             }
           }
-          slug
-        
-         excerpt
-       }
- 
-     }
+        }
+        slug
+        excerpt
+      }
     }
-   }
-   `
+  }
+}
+`
 
 
 export default IndexPage
+//width: 700, layout: CONSTRAINED
