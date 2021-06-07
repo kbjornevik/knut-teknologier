@@ -3,38 +3,6 @@ import { render } from 'react-dom';
 import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'recharts';
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
- { 'Kr_sand':0.53,
-   'Bergen':0.53,
-   'Oslo':0.53,
-   'Tromsø':0.30,
-   'Molde':0.31,
-   'Tr_heim':0.31,
-   'Dato':'05-20'}
-,
- { 'Kr_sand':0.36,
-   'Bergen':0.36,
-   'Oslo':0.36,
-   'Tromsø':0.25,
-   'Molde':0.25,
-   'Tr_heim':0.25,
-   'Dato':'05-21'}
-,
- { 'Kr_sand':0.19,
-   'Bergen':0.19,
-   'Oslo':0.19,
-   'Tromsø':0.19,
-   'Molde':0.20,
-   'Tr_heim':0.20,
-   'Dato':'05-22'}
-,
- { 'Kr_sand':0.26,
-   'Bergen':0.26,
-   'Oslo':0.26,
-   'Tromsø':0.18,
-   'Molde':0.20,
-   'Tr_heim':0.20,
-   'Dato':'05-23'}
-,
  { 'Kr_sand':0.43,
    'Bergen':0.43,
    'Oslo':0.43,
@@ -122,6 +90,38 @@ const linedata = [
    'Molde':0.39,
    'Tr_heim':0.39,
    'Dato':'06-03'}
+,
+ { 'Kr_sand':0.57,
+   'Bergen':0.51,
+   'Oslo':0.51,
+   'Tromsø':0.23,
+   'Molde':0.40,
+   'Tr_heim':0.40,
+   'Dato':'06-04'}
+,
+ { 'Kr_sand':0.57,
+   'Bergen':0.47,
+   'Oslo':0.47,
+   'Tromsø':0.23,
+   'Molde':0.42,
+   'Tr_heim':0.42,
+   'Dato':'06-05'}
+,
+ { 'Kr_sand':0.55,
+   'Bergen':0.46,
+   'Oslo':0.46,
+   'Tromsø':0.22,
+   'Molde':0.41,
+   'Tr_heim':0.41,
+   'Dato':'06-06'}
+,
+ { 'Kr_sand':0.58,
+   'Bergen':0.53,
+   'Oslo':0.53,
+   'Tromsø':0.21,
+   'Molde':0.56,
+   'Tr_heim':0.56,
+   'Dato':'06-07'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
