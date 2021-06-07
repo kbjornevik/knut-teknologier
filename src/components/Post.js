@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Badge,Card,CardText,CardTitle,CardSubtitle,CardBody} from "reactstrap"
+import { Button,Card,CardText,CardTitle,CardSubtitle,CardBody} from "reactstrap"
 //import { slugify } from '../util/utilityFunctions'
+import { slugify } from "../util/utilityFunctions"
 
 const CardStyle = {
   marginLeft: '10px',
@@ -17,6 +18,7 @@ const CardStyle = {
 const CardBodyStyle = {
   marginLeft: '1px',
   paddingTop: '1px',
+  fontSize: '16px',
  // justifyContent:'center',
  // alignItems:'center',
   
@@ -38,22 +40,22 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) => {
       <div >
       <CardBody style={CardBodyStyle}>
         <CardTitle>
-              <Link to={`/${slug}`}> {title} </Link>
+             <h2> <Link to={`/${slug}`}> {title} </Link></h2>
         </CardTitle>
-        <CardSubtitle>
-          <span className="text-info">{date}</span> av{" "}
-          <span className="text-info">{author}</span>
+
+        <CardSubtitle color="primary"  id="CardSubtitle">
+          <span className="text-info" key="keyDate">{date}</span> av{" "}
+          <span className="text-info" key="keyAuthor">{author}</span>
         </CardSubtitle>
          <CardText>{body}</CardText>
         
          <ul className="post-tags">
           {tags.map(tag => (
             <li key={tag}>
-              <Link to = {`/${slug}`}>
-                <Badge color="secondary" className="text-uppercase">
-                  TAG {tag}
-                </Badge>
-              </Link>
+              <Button color="primary" href={`/tag/${slugify(tag)}`}>
+              {tag} 
+            </Button>
+              
             </li>
           ))}
         </ul>

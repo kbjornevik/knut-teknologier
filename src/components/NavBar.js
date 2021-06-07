@@ -19,19 +19,19 @@ const CustomNavbar = (props) => {
  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  Navbar.propTypes = {
-    light: true
-  }
+ // Navbar.propTypes = {     light: true   }
   const divStyle= {
-    marginLeft: '1px',
+   // marginLeft: '1px',
     paddingRight: '9px',
-    paddingLeft: '9px'
+    paddingLeft: '9px',
+    float: "none",
+    margin: "auto"
   }
   console.log(props);
   return (
     
     <div id="NavContainer" style={divStyle}>
-      <Navbar color="ligth" light  expand="md" id="site-navbar" style={divStyle}>
+      <Navbar color="ligth" light  expand="md" id="site-navbar" style={divStyle} md="9">
         {/* <Container> */}
         <NavbarBrand style={{color: '#000'}} bg="dark" href="/">Knut</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -47,7 +47,7 @@ const CustomNavbar = (props) => {
               <DropdownToggle nav caret>
               Nordpool
               </DropdownToggle>
-              <DropdownMenu left>
+              <DropdownMenu >
               <DropdownItem>
                    <NavLink href="/nordpool">DayaHeadpriser </NavLink>
                 </DropdownItem>
@@ -61,7 +61,7 @@ const CustomNavbar = (props) => {
               <DropdownToggle nav caret>
               Om Siden
               </DropdownToggle>
-              <DropdownMenu left>
+              <DropdownMenu >
                 <DropdownItem>
                    <NavLink href="/about">Om siten </NavLink>
                 </DropdownItem>

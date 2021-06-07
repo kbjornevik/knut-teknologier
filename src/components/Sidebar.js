@@ -21,7 +21,8 @@ const Sidebar = () => (
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-            <div> <img src={KnutImg} rounded style={{ width: "50%" }} /></div>
+            <a href="/001-om-knut">
+            <div> <img src={KnutImg}  style={{ width: "50%" }} /></div> </a>
              IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
           <Form className="text-center">
@@ -63,7 +64,8 @@ const Sidebar = () => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                   <Link to = {`/${node.slug}`}>
-                    <GatsbyImage style={{marginTop:"10px"}}
+                    <GatsbyImage style={{marginTop:"10px"} }
+                      alt=""
                       image={node.frontmatter.image.childImageSharp.gatsbyImageData}
                       className="card-image-top" />
                   

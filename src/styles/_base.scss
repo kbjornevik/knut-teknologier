@@ -1,19 +1,22 @@
-.container#content {
-  margin-top: 60px;
+#CardSubtitle{
+  color: #121213;
 }
-body {
+.container#content {
+  margin-top: 10px;
+}
+.body {
   background-color: $light-gray;
   font-family: $site-font;
 }
 a {
-  color: #0056b3;
-  &:hover {
+  color: #01080f;
+   &:hover {
     color: #007bff;
     text-decoration: none;
   }
 }
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   text-align: center;
 }
 .navbar {
@@ -23,9 +26,14 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 1;
 }
+.badge {
+  background-color: rgb(135, 125, 211);
+}
+
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #0056b3;
+  color: #00050a;
+  font-size: 1.2rem;
   &:hover {
     color: #007bff;
   }
@@ -33,4 +41,7 @@ h1 {
 ul {
   list-style: none;
   padding: 0;
+}
+.text_info{
+  color: #00050a;
 }

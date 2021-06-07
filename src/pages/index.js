@@ -16,9 +16,7 @@ const IndexPage = () => (
          <meta name="robots" content="allow"/>
       </Helmet>
       <h1>Knut's legendariske tema </h1>
-
-      <Badge color="danger">Danger</Badge>
-       <StaticQuery
+      <StaticQuery
         query={indexQuery}
         render={data => {
            return (

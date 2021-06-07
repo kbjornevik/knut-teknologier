@@ -18,6 +18,13 @@ import {Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from "../components/Sidebar"
 //import { NavbarBrand } from "react-bootstrap"
+const container = {
+  marginLeft: '1px',
+  paddingTop: '1px',
+  fontSize: '16px',
+  textAlign: 'center'
+
+}
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -31,15 +38,21 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <CustomNavbar siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="container" id="content">
-        <Row>
-          <Col md="8">{children}</Col>
-          <Col md="4"><Sidebar/></Col>
+    
+     
+    <div className="container" id="content">
+      <Row key="Header">
+           <Col md="12" key="HeadreCol"> <CustomNavbar siteTitle={data.site.siteMetadata?.title || `Title`} /></Col>
+      </Row>
+     
+        <Row key="uniqueId1">
+          <Col md="9" key="uniqueCol1">{children}</Col>
+          <Col md="3"  key="uniqueCol2"><Sidebar/></Col>
         </Row>
         
       </div>
       <Footer/>
+    
     </>
   )
   

@@ -17,23 +17,25 @@ const SinglePost = ({ data,pageContext }) => {
   //const post = data.allMdx.nodes.frontmatter
   const post=data.mdx
   const baseUrl = 'https://knutteknologier.gtsb.io/'
-
+ console.log("Single_Pots")
   return (
     <Layout>
        <Seo title={post.frontmatter.title} description={post.frontmatter.description}/>
+       
        <h1>{post.frontmatter.title} </h1>
+
        <Card>
-             <GatsbyImage
+             <GatsbyImage alt=""
                image={post.frontmatter.image.childImageSharp.gatsbyImageData}
                className="card-image-top" />
       <CardBody>
              <CardSubtitle>
-                 <span className="text-info">{post.frontmatter.date}</span> skrevet av: {" "}
-                 <span className="text-info">{post.frontmatter.author}</span>
+                 <span className="text-info" key="Key1">{post.frontmatter.date}</span> skrevet av: {" "}
+                 <span className="text-info"  key="Key2">{post.frontmatter.author}</span>
              </CardSubtitle> 
              <MDXRenderer>{post.body}</MDXRenderer>
         </CardBody>
-        <ul className="post-tags">
+        <ul className="post-tags" key="ULUniqkey">
                {post.frontmatter.tags.map(tag => (
                  <li key={tag}>
                    
@@ -59,7 +61,7 @@ const SinglePost = ({ data,pageContext }) => {
          </h3>
          <div className="text-center social-share-links">
            <ul>
-             <li><a 
+             <li key="liKey1"><a 
                  href={'https://www.facebook.com/sharer.php?u=' 
                  + baseUrl 
                  + pageContext.slug
