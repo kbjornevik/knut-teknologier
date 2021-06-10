@@ -4,30 +4,6 @@ import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'rech
 import {MdxTabell,TordVedTyinVann} from '../components/MdxTabell.js'
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
- { 'Kr_sand':0.43,
-   'Bergen':0.43,
-   'Oslo':0.43,
-   'Tromsø':0.23,
-   'Molde':0.32,
-   'Tr_heim':0.32,
-   'Dato':'05-24'}
-,
- { 'Kr_sand':0.50,
-   'Bergen':0.50,
-   'Oslo':0.50,
-   'Tromsø':0.25,
-   'Molde':0.35,
-   'Tr_heim':0.35,
-   'Dato':'05-25'}
-,
- { 'Kr_sand':0.52,
-   'Bergen':0.52,
-   'Oslo':0.52,
-   'Tromsø':0.23,
-   'Molde':0.31,
-   'Tr_heim':0.31,
-   'Dato':'05-26'}
-,
  { 'Kr_sand':0.52,
    'Bergen':0.52,
    'Oslo':0.52,
@@ -123,6 +99,30 @@ const linedata = [
    'Molde':0.56,
    'Tr_heim':0.56,
    'Dato':'06-07'}
+,
+ { 'Kr_sand':0.58,
+   'Bergen':0.54,
+   'Oslo':0.54,
+   'Tromsø':0.20,
+   'Molde':0.54,
+   'Tr_heim':0.54,
+   'Dato':'06-08'}
+,
+ { 'Kr_sand':0.58,
+   'Bergen':0.55,
+   'Oslo':0.55,
+   'Tromsø':0.21,
+   'Molde':0.54,
+   'Tr_heim':0.54,
+   'Dato':'06-09'}
+,
+ { 'Kr_sand':0.57,
+   'Bergen':0.54,
+   'Oslo':0.55,
+   'Tromsø':0.19,
+   'Molde':0.52,
+   'Tr_heim':0.52,
+   'Dato':'06-10'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( 
