@@ -1,17 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom';
 import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'recharts';
-import {MdxTabell,TordVedTyinVann} from '../components/MdxTabell.js'
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
- { 'Kr_sand':0.52,
-   'Bergen':0.52,
-   'Oslo':0.52,
-   'Tromsø':0.24,
-   'Molde':0.32,
-   'Tr_heim':0.32,
-   'Dato':'05-27'}
-,
  { 'Kr_sand':0.53,
    'Bergen':0.53,
    'Oslo':0.53,
@@ -123,11 +114,17 @@ const linedata = [
    'Molde':0.52,
    'Tr_heim':0.52,
    'Dato':'06-10'}
+,
+ { 'Kr_sand':0.57,
+   'Bergen':0.51,
+   'Oslo':0.52,
+   'Tromsø':0.21,
+   'Molde':0.38,
+   'Tr_heim':0.38,
+   'Dato':'06-11'}
  ] 
     const LineChartPris = ({ }) =>
-    {   return ( 
-      <>
-    < LineChart width ={600}   height ={ 250} data ={ linedata} 
+    {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
       margin ={ { top: 5, right: 30, left: 20, bottom: 5 } }>
       < CartesianGrid strokeDasharray = '3 3' /> 
       < XAxis  tick={{fontSize: 8}} dataKey = 'Dato' />  < YAxis datakey = 'Bergen' />  < Tooltip /> < Legend />
@@ -137,9 +134,5 @@ const linedata = [
       < Line type = 'monotone' dataKey = 'Tr_heim' stroke = '#ffed00' />
       < Line type = 'monotone' dataKey = 'Molde' stroke = '#00254a' />
       < Line type = 'monotone' dataKey = 'Tromsø' stroke = '#038d05' />
-      </ LineChart >
-   <div> <MdxTabell></MdxTabell> <TordVedTyinVann></TordVedTyinVann></div>
-   </>
-   )
-    }
+      </ LineChart >) }
   export default LineChartPris;
