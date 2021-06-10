@@ -31,7 +31,7 @@ const CustomNavbar = (props) => {
   return (
     
     <div id="NavContainer" style={divStyle}>
-      <Navbar color="ligth" light  expand="md" id="site-navbar" style={divStyle} md="9">
+      <Navbar color="ligth" light  expand="md" id="site-navbar" style={divStyle} >
         {/* <Container> */}
         <NavbarBrand style={{color: '#000'}} bg="dark" href="/">Knut</NavbarBrand>
         <NavbarToggler onClick={toggle} />

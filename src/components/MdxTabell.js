@@ -1,9 +1,9 @@
 import React  from 'react';
 import {Row,Col} from 'reactstrap'
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 //import Img from 'gatsby-image';
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage,StaticImage } from "gatsby-plugin-image";
+
 const Styletabell={
    // marginLeft: '10px',
    // paddingTop: '5px',
@@ -16,45 +16,66 @@ const Styletabell={
 
 
 }
-// // <GatsbyImage image = {fluid} width="100%" className="card-image-center" alt="" />
-
-const ImageFluid = () => {
-	const  data  = useStaticQuery(
-        graphql`
-			query {
-				placeholderImage: file(relativePath: { eq: "stravarutegpsdyrhaugstind.jpg" }) {
-					childImageSharp {
-						fluid(maxWidth: 300) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-			}
-            `
+ const flexContainer ={
+    display: 'flex',
+    flexWrap: 'wrap',
+    fontSize: '30px',
+    textAlign: 'center'
+  }
+  
+  const flexItemLeft ={
+    backgroundColor: '#f1f1f1',
+    padding: '10px',
+    flex: '50%'
+  }
+  
+  const flexItemRight = {
+    backgroundColor: 'dodgerblue',
+    padding: '10px',
+    flex: '50%',
+    maxWidth: '300px'
+  }
+  const imageStyle={
+    width: '500px'
+  }
+  export function TordVedTyinVann(props) {
+      const filNavn ="../images/Filefjell/Tord-ved-Tyinvann.jpg"
+     
+      console.log('props:',filNavn)
+    
+    return (
+      <StaticImage
+        src= {filNavn}
+        alt="A dinosaur"
+        placeholder="blurred"
+        layout="fixed"
+        width={200}
+        height={200}
+        float ="left"
+      />
     )
-    return data.placeholderImage.childImageSharp.fluid
-			
-	
-	
-        };
-
-const MdxTabell = (props) => {
+  }
+export const MdxTabell = (props) => {
     const tekst = props.Tekst;
+    const scrNavn ="../images/Filefjell/Tord-ved-Tyinvann.jpg"
     const pictureName =props.pictureName
   //  const { title } = useSiteMetadata()
-    const fluid = ImageFluid();
+
     console.log("pictureName",pictureName)
     return(
-        <div className="container" >
-        <Row key="uniqueId1" style={Styletabell}>
-          <Col md="8" key="uniqueCol1">{tekst}</Col>
-          <Col md="4"  key="uniqueCol2">   ImageFluid: 
-          <img src={pictureName} alt="Mountains" width="200"></img>
-         
-         </Col>
-        </Row>
+        
+     <div style={flexContainer}>
+             <div style={flexItemLeft}>
+                  {tekst}  <a target="_blank" rel="noopener noreferrer"  href="https://www.strava.com/activities/3771814330" > Strava tur </a> 
+            </div>
+            <div class={flexItemRight} id="flexRight">
+            <TordVedTyinVann></TordVedTyinVann>
+            </div>
+            
+     </div>
+        
 
-        </div>
+    
     );
 }
 export default MdxTabell

@@ -21,7 +21,7 @@ const Sidebar = () => (
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-            <a href="/001-om-knut">
+            <a href="001-om-knut">
             <div> <img src={KnutImg}  style={{ width: "50%" }} /></div> </a>
              IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
@@ -63,13 +63,14 @@ const Sidebar = () => (
               {data.allMdx.edges.map(({ node }) => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                  <Link to = {`/${node.slug}`}>
-                    <GatsbyImage style={{marginTop:"10px"} }
-                      alt=""
+                 <Link to = {`/${node.slug}`}>
+                    <GatsbyImage style={{marginTop:"10px"}}
                       image={node.frontmatter.image.childImageSharp.gatsbyImageData}
                       className="card-image-top" />
-                  
+
                   </Link>
+                 
+                
                   <CardBody>
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>

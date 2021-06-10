@@ -45,7 +45,7 @@ const IndexPage = () => (
   )
 
   const indexQuery = graphql`{
-  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 4) {
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 6) {
     totalCount
     edges {
       node {
