@@ -6,7 +6,7 @@ author: "Knut Bjørnevik"
 image: "../../images/disgus-com.jpg"
 slug: "disqus"
 tags:
-  - Tekologi
+  - Teknologi
   - Gatsby
   - Disqus
 ---

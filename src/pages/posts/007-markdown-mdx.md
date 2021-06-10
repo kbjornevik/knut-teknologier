@@ -6,9 +6,8 @@ author: "Knut Bjørnevik"
 image: "../../images/kystvakten.jpg"
 slug: "test"
 tags:
-  - Tekologi
+  - Teknologi
   - Gatsby
-  - test
 ---
 
 ># Markdown
