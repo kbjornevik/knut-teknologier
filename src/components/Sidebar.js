@@ -21,7 +21,7 @@ const Sidebar = () => (
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-            <a href="001-om-knut">
+            <a href="../001-om-knut">
             <div> <img src={KnutImg}  style={{ width: "50%" }} /></div> </a>
              IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
