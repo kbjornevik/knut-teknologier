@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
 import Helmet from 'react-helmet';
-import { Badge} from "reactstrap"
+//import { Badge} from "reactstrap"
 
 const IndexPage = () => (
   <Layout>
@@ -33,7 +33,7 @@ const IndexPage = () => (
                    fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
                    tags={node.frontmatter.tags}
                    name={node.frontmatter.image.name}
-                   id={node.frontmatter.image.childImageSharp.id}
+                   imageID={node.frontmatter.image.childImageSharp.id}
              
                    />
                    

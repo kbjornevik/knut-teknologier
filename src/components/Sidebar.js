@@ -63,10 +63,10 @@ const Sidebar = () => (
               {data.allMdx.edges.map(({ node }) => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                 <Link to = {`/${node.slug}`}>
-                    <GatsbyImage style={{marginTop:"10px"}}
-                      image={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                      className="card-image-top" />
+                 <Link to = {`/${node.slug}`}> LINK 
+                    GatsbyImage 
+                      image=node.frontmatter.image.childImageSharp.gatsbyImageData
+                      className="card-image-top" 
 
                   </Link>
                  

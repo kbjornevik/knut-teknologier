@@ -28,9 +28,10 @@ const CardBodyStyle = {
  // LISTE: {tag} +{`/${slug}`}
 
 };
-const Post = ({ title, author, slug, date, body, fluid, tags ,name,id}) => {
-  console.log("Post.js Image Name",name)
-  console.log("Post.js Image ID",id)
+const Post = ({ id,title, author, slug, date, body, fluid, tags ,name,imageID}) => {
+  const trace = "Post.js  ID: " + {id} + " Image Name : " + {name} + "ImageID: " + {imageID};
+  console.log("Post.js ",trace)
+  
   return (
     
     <Card style={CardStyle} > 
@@ -44,7 +45,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags ,name,id}) => {
         <CardTitle>
              <h2> <Link to={`/${slug}`}> {title} </Link></h2>
         </CardTitle>
-
+         <p>name:{name}</p>
         <CardSubtitle color="primary"  id="CardSubtitle">
           <span className="text-info" key="keyDate">{date}</span> av{" "}
           <span className="text-info" key="keyAuthor">{author}</span>
