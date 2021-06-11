@@ -28,7 +28,9 @@ const CardBodyStyle = {
  // LISTE: {tag} +{`/${slug}`}
 
 };
-const Post = ({ title, author, slug, date, body, fluid, tags }) => {
+const Post = ({ title, author, slug, date, body, fluid, tags ,name,id}) => {
+  console.log("Post.js Image Name",name)
+  console.log("Post.js Image ID",id)
   return (
     
     <Card style={CardStyle} > 

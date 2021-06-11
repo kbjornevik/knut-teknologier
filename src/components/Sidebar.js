@@ -99,6 +99,7 @@ const Sidebar = () => (
           title
           date(formatString: "DD-MM-YYYY")
           image {
+            name
             childImageSharp {
               gatsbyImageData(width: 300, layout: CONSTRAINED)
             }

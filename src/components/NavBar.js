@@ -27,7 +27,7 @@ const CustomNavbar = (props) => {
     float: "none",
     margin: "auto"
   }
-  console.log(props);
+  console.log("Navbar Props ",props);
   return (
     
     <div id="NavContainer" style={divStyle}>

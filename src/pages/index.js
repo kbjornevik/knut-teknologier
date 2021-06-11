@@ -22,6 +22,7 @@ const IndexPage = () => (
            return (
              <div>
                {data.allMdx.edges.map(({ node }) => (
+                
                  <Post 
                    id = {node.id}
                    title={node.frontmatter.title}
@@ -31,6 +32,8 @@ const IndexPage = () => (
                    body={node.excerpt}
                    fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
                    tags={node.frontmatter.tags}
+                   name={node.frontmatter.image.name}
+                   id={node.frontmatter.image.childImageSharp.id}
              
                    />
                    
@@ -56,8 +59,10 @@ const IndexPage = () => (
           author
           tags
           image {
+            name
             childImageSharp {
               gatsbyImageData(width: 800, layout: CONSTRAINED)
+              id
             }
           }
         }

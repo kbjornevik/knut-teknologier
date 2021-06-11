@@ -17,7 +17,7 @@ const SinglePost = ({ data,pageContext }) => {
   //const post = data.allMdx.nodes.frontmatter
   const post=data.mdx
   const baseUrl = 'https://knutteknologier.gtsb.io/'
- console.log("Single_Pots")
+ console.log("Single_Post:",post.frontmatter.title)
   return (
     <Layout>
        <Seo title={post.frontmatter.title} description={post.frontmatter.description}/>

@@ -58,8 +58,10 @@ exports.onCreateNode =  ({ node, actions }) => {
     const posts = res.data.allMdx.edges
       // Create single blog post
       posts.forEach(({ node }) => {
+        console.log("CreatePage SingleBlog",node.slug)
         createPage({
           path: node.slug,
+         
           component: templates.singlepost,
           context: {
             // passing slug for template to get post
