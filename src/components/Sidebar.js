@@ -74,10 +74,10 @@ const Sidebar = () => (
                   <CardBody>
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
-                     <Link to={node.slug}>  </Link>
+                     <Link to = {`/${node.slug}`}>  
                       
-                      <a href={node.slug}> {node.frontmatter.title} </a>
-                     
+                       {node.frontmatter.title} 
+                      </Link>
                     </CardTitle>
                   </CardBody>
                 </Card>
