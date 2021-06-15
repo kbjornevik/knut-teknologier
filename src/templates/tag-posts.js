@@ -5,7 +5,7 @@ import Post from "../components/Post"
 // gatsbyImageData(width: 650, height: 371, layout: CONSTRAINED)
 
 
-const tagPosts = ({ data, pageContext }) => {
+const TagPosts = ({ data, pageContext }) => {
   const { tag } = pageContext
   const { totalCount } = data.allMdx
   const pageHeader = `${totalCount} post${
@@ -59,4 +59,4 @@ export const tagQuery = graphql`query ($tag: String!) {
 }
 `
 
-export default tagPosts
+export default TagPosts

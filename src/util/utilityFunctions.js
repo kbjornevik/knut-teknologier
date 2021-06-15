@@ -1,4 +1,4 @@
-const slugify = function(text) {
+const Slugify = function(text) {
   return text
     .toString()
     .toLowerCase()
@@ -9,4 +9,4 @@ const slugify = function(text) {
     .replace(/-+$/, "") // Trim - from end of text
 }
 
-module.exports = { slugify }
+module.exports = { Slugify }

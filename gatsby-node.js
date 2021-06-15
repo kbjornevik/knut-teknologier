@@ -6,14 +6,14 @@
 
 // You can delete this file if you're not using it
 
-const { slugify } = require("./src/util/utilityFunctions")
+const { Slugify } = require("./src/util/utilityFunctions")
 const path = require("path")
 const _ = require("lodash")
 
 exports.onCreateNode =  ({ node, actions }) => {
     const { createNodeField } = actions
     if (node.internal.type === "Mdx") {
-      const slugFromTitle = slugify(node.frontmatter.title)
+      const slugFromTitle = Slugify(node.frontmatter.title)
       console.log('Lager nytt felt Slug from Tile: :', slugFromTitle)
       createNodeField({
         node,
@@ -107,7 +107,7 @@ exports.onCreateNode =  ({ node, actions }) => {
     //Create tag posts Pages
     tags.forEach(tag => {
       createPage({
-        path: `/tag/${slugify(tag)}`,
+        path: `/tag/${Slugify(tag)}`,
         component: templates.taggedPosts,
         context: {
           tag,

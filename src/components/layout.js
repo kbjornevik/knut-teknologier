@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
            <Col md="12" key="HeadreCol"> <CustomNavbar siteTitle={data.site.siteMetadata?.title || `Title`} /></Col>
       </Row>
      
-        <Row key="uniqueId1">
+        <Row key="uniqueKey1" id="uniqueID1">
           <Col md="9" key="uniqueCol1">{children}</Col>
           <Col md="3"  key="uniqueCol2"><Sidebar/></Col>
         </Row>

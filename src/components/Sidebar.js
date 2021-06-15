@@ -14,15 +14,18 @@ import {
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
 import KnutImg from "../images/knutpaaprest.jpg"
-
+//        <a href="../001-om-knut">
 
 const Sidebar = () => (
     <div>
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-            <a href="../001-om-knut">
-            <div> <img src={KnutImg}  style={{ width: "50%" }} /></div> </a>
+              <Link to="/001-om-knut">     
+               <div> <img src={KnutImg}  style={{ width: "50%" }} /></div>
+              </Link>
+    
+      
              IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
           <Form className="text-center">
@@ -56,7 +59,7 @@ const Sidebar = () => (
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3">
-            De siste innleggene
+            De siste innleggene:
           </CardTitle>
           <StaticQuery  query={sidebarQuery}  render={(data) => (
             <div>
@@ -64,14 +67,15 @@ const Sidebar = () => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                  <Link to = {`/${node.slug}`}> LINK 
-                 <GatsbyImage style={{marginTop:"10px"}}
+                 <GatsbyImage style={{marginTop:"10px"} }
                       image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                      alt={node.slug}
                       className="card-image-top" />
 
                   </Link>
                  
                 
-                  <CardBody>
+                  <CardBody id="Layout_CardBody">
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
                      <Link to = {`/${node.slug}`}>  

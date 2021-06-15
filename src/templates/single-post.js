@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import  Seo from '../components/seo'
-import { slugify } from "../util/utilityFunctions"
+import { Slugify } from "../util/utilityFunctions"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import ReactDisqusComments from 'react-disqus-comments';
@@ -39,7 +39,7 @@ const SinglePost = ({ data,pageContext }) => {
                {post.frontmatter.tags.map(tag => (
                  <li key={tag}>
                    
-                  <Link to={`/tag/${slugify(tag)}`}>
+                  <Link to={`/tag/${Slugify(tag)}`}>
                     <Badge color="primary">{tag}</Badge>
                   </Link>
                  </li>

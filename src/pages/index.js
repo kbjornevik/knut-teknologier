@@ -20,10 +20,11 @@ const IndexPage = () => (
         query={indexQuery}
         render={data => {
            return (
-             <div>
+             <div >
                {data.allMdx.edges.map(({ node }) => (
                 
                  <Post 
+                  key= {node.id}
                    id = {node.id}
                    title={node.frontmatter.title}
                    author={node.frontmatter.author}
@@ -32,8 +33,7 @@ const IndexPage = () => (
                    body={node.excerpt}
                    fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
                    tags={node.frontmatter.tags}
-                   name={node.frontmatter.image.name}
-                   imageID={node.frontmatter.image.childImageSharp.id}
+               
              
                    />
                    
@@ -59,10 +59,10 @@ const IndexPage = () => (
           author
           tags
           image {
-            name
+            
             childImageSharp {
               gatsbyImageData(width: 800, layout: CONSTRAINED)
-              id
+            
             }
           }
         }
