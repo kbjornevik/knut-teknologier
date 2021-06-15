@@ -67,8 +67,11 @@ const Sidebar = () => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                  <Link to = {`/${node.slug}`}> LINK 
+               
+
+                  </Link>
                  
-                   BILDE:
+                
                   <CardBody id="Layout_CardBody">
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
