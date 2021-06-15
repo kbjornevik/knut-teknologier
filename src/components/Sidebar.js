@@ -67,14 +67,8 @@ const Sidebar = () => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                  <Link to = {`/${node.slug}`}> LINK 
-                 <GatsbyImage style={{marginTop:"10px"} }
-                      image={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                      alt={node.slug}
-                      className="card-image-top" />
-
-                  </Link>
                  
-                
+                   BILDE:
                   <CardBody id="Layout_CardBody">
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
