@@ -16,23 +16,23 @@ import bergenckImg from "../images/vossgeilo2019.jpg"
 import KnutImg from "../images/knutpaaprest.jpg"
 //        <a href="../001-om-knut">
 
-const Sidebar = () => (
+const Sidebar = () => {
+  
+  return(
     <div>
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-              <Link to="/001-om-knut">     
+              <Link to="/Om-knut">     
                <div> <img src={KnutImg}  style={{ width: "50%" }} /></div>
               </Link>
-    
-      
-             IT-Rådgiver, utvikler, mosjonist
+                 IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
           <Form className="text-center">
             <FormGroup>
             
             </FormGroup>
-            <Button className="btn btn-success"  href="../001-om-knut">
+            <Button className="btn btn-success"  href="../Om-knut">
               Knut Bjørnevik
             </Button>
            {/*} <Link to = "../001-om-knut">
@@ -67,7 +67,12 @@ const Sidebar = () => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                  <Link to = {`/${node.slug}`}> LINK 
-               
+                 <GatsbyImage style={{marginTop:"10px"} }
+                         
+                         image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                   
+                         alt={node.slug}
+                         className="card-image-top" />
 
                   </Link>
                  
@@ -89,7 +94,7 @@ const Sidebar = () => (
         </CardBody>
       </Card>
     </div>
-  )
+  )}
   
   const sidebarQuery = graphql`query sidebarQuery {
   allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 5) {

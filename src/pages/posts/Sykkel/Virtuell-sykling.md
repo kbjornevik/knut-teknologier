@@ -3,7 +3,7 @@ title: "Virituell sykling og trening"
 date: 2020-10-10 07:00:00
 description: "Hvilken Virtuell treningsapp skal jeg benytte "
 author: "Knut Bjørnevik"
-image: "../../images/zwift.jpg"
+image: "../../../images/zwift.jpg"
 slug: "Virtuell"
 tags:
   - Zwift

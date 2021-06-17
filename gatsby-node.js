@@ -10,6 +10,7 @@ const { Slugify } = require("./src/util/utilityFunctions")
 const path = require("path")
 const _ = require("lodash")
 
+// onCreate node løper for alle filer i prosjektet . Må sjekke hva den gjør med md filer
 exports.onCreateNode =  ({ node, actions }) => {
     const { createNodeField } = actions
     if (node.internal.type === "Mdx") {
@@ -23,6 +24,10 @@ exports.onCreateNode =  ({ node, actions }) => {
     }
 }
 
+
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info(`Knut Your Gatsby site has been built!`)
+}
  
  exports.createPages =  ({ actions, graphql }) => {
     const { createPage } = actions;
