@@ -101,24 +101,9 @@ exports.onPostBuild = ({ reporter }) => {
    
     tags = _.uniq(tags)
 
-    createPage({
-      path: "/tags",
-      component: templates.tagsPage,
-      context: {
-        tags,
-        tagPostCounts,
-      },
-    })
+    
     //Create tag posts Pages
-    tags.forEach(tag => {
-      createPage({
-        path: `/tag/${Slugify(tag)}`,
-        component: templates.taggedPosts,
-        context: {
-          tag,
-        },
-      })
-    })
+
 
    })
 }
