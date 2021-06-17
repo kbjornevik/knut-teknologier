@@ -29,12 +29,12 @@ const CardBodyStyle = {
 
 };
 const Post = ({ id,title, author, slug, date, body, fluid, tags }) => {
-  const trace = "Post.js  ID: " + {id} ;
-  console.log("Post.js ",trace)
+  
+  console.log("Post.js  SLUG",slug)
   
   return (
     
-    <Card style={CardStyle} > 
+    <Card style={CardStyle} key ={id}> 
        
        
       <Link to = {`/${slug}`}>
@@ -45,16 +45,16 @@ const Post = ({ id,title, author, slug, date, body, fluid, tags }) => {
         <CardTitle>
              <h2> <Link to={`/${slug}`}> {title} </Link></h2>
         </CardTitle>
-         <p> slug:{slug}</p>
+  
         <CardSubtitle color="primary"  id="CardSubtitleID" key="CardSubtitleKey">
           <span className="text-info" key="keyDate">{date}</span> av{" "}
           <span className="text-info" key="keyAuthor">{author}</span>
         </CardSubtitle>
          <CardText>{body}</CardText>
         
-         <ul className="post-tags" >
+         <ul className="post-tags" id = {slug}>
           {tags.map(tag => (
-            <li id={tag}>
+            <li key={tag} id ={tag} >
               <Button color="primary" href={`/tag/${Slugify(tag)}`}>
               {tag} 
             </Button>

@@ -17,6 +17,7 @@ import {Row,Col} from 'reactstrap'
 //import "../styles/index.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from "../components/Sidebar"
+import { useSiteMetadata } from "../components/hooks/siteMetadata"
 //import { NavbarBrand } from "react-bootstrap"
 const container = {
   marginLeft: '1px',
@@ -26,23 +27,16 @@ const container = {
 
 }
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const { title, siteUrl,description } = useSiteMetadata()
+
 
   return (
     <>
     
      
     <div className="container" id="content">
-      <Row key="Header">
-           <Col md="12" key="HeadreCol"> <CustomNavbar siteTitle={data.site.siteMetadata?.title || `Title`} /></Col>
+      <Row rowkey="LayoutHeader">
+           <Col md="12" key="HeadreCol"> <CustomNavbar siteTitle={title || `Title`} /></Col>
       </Row>
      
         <Row key="uniqueKey1" id="uniqueID1">

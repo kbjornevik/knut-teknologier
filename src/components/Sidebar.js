@@ -7,10 +7,8 @@ import {
   CardTitle,
   CardBody,
   Form,
-  Image,
   FormGroup,
-  Input,
-  Badge
+
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
 import KnutImg from "../images/knutpaaprest.jpg"
@@ -24,7 +22,7 @@ const Sidebar = () => {
         <CardBody>
             <CardTitle className="text-center  mb-3">
               <Link to="/Om-knut">     
-               <div> <img src={KnutImg}  style={{ width: "50%" }} /></div>
+               <div> <img src={KnutImg}  style={{ width: "50%" }}  alt="Knut Bjørnevik" /></div>
               </Link>
                  IT-Rådgiver, utvikler, mosjonist
           </CardTitle>

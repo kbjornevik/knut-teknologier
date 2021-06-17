@@ -24,7 +24,7 @@ const IndexPage = () => (
                {data.allMdx.edges.map(({ node }) => (
                 
                  <Post 
-                  key= {node.id}
+                   key = {node.id}
                    id = {node.id}
                    title={node.frontmatter.title}
                    author={node.frontmatter.author}
