@@ -112,6 +112,7 @@ exports.onPostBuild = ({ reporter }) => {
     
  //Create tag posts Pages
  tags.forEach(tag => {
+   console.log("Create page for tag:",tag)
   createPage({
     path: `/tag/${Slugify(tag)}`,
     component: templates.taggedPosts,
