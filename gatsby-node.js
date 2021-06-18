@@ -29,7 +29,7 @@ exports.onPostBuild = ({ reporter }) => {
   reporter.info(`Knut Your Gatsby site has been built!`)
 }
  
- exports.createPages =  ({ actions, graphql }) => {
+ exports.createPages =  ({ graphql, actions  }) => {
     const { createPage } = actions;
 
     const templates = {
@@ -101,8 +101,25 @@ exports.onPostBuild = ({ reporter }) => {
    
     tags = _.uniq(tags)
 
+    createPage({
+      path: "/tags",
+      component: templates.tagsPage,
+      context: {
+        tags,
+        tagPostCounts,
+      },
+    })
     
-    //Create tag posts Pages
+ //Create tag posts Pages
+ tags.forEach(tag => {
+  createPage({
+    path: `/tag/${Slugify(tag)}`,
+    component: templates.taggedPosts,
+    context: {
+      tag,
+    },
+  })
+  }) // Slutt  tags.forEach
 
 
    })

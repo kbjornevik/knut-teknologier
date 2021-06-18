@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql,StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/Post"
 // gatsbyImageData(width: 650, height: 371, layout: CONSTRAINED)
@@ -14,6 +14,11 @@ const TagPosts = ({ data, pageContext }) => {
 
   return (
     <Layout pageTitle={pageHeader}>
+       <StaticQuery
+        query={tagQuery}
+        render={data => {
+           return (
+             <div >
       {data.allMdx.edges.map(({ node }) => (
         <Post
           key={node.id}
@@ -25,7 +30,12 @@ const TagPosts = ({ data, pageContext }) => {
           tags={node.frontmatter.tags}
           fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
         />
+       
       ))}
+        </div>
+           );
+         }}
+        />
     </Layout>
   );
 }

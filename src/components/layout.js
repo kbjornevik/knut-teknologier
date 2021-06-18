@@ -8,7 +8,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+//import { useStaticQuery, graphql } from "gatsby"
 //import Navigation from "./Navigation"
 import CustomNavbar from "./NavBar"
 import Footer from "./Footer"
