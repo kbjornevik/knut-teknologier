@@ -13,6 +13,7 @@ import {
 import bergenckImg from "../images/vossgeilo2019.jpg" 
 import KnutImg from "../images/knutpaaprest.jpg"
 //        <a href="../001-om-knut">
+// {node.frontmatter.image.childImageSharp.gatsbyImageData}
 
 const Sidebar = (props) => {
   console.log("Sidebar   called ")
@@ -64,14 +65,15 @@ const Sidebar = (props) => {
               {data.allMdx.edges.map(({ node }) => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                 <Link to = {`/${node.slug}`}> LINK 
-                 <GatsbyImage style={{marginTop:"10px"} }
-                         
-                         image={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                   
+                 <Link to = {`/${node.slug}`}> 
+                 {console.log("LOG node.title ",node.frontmatter.title)}
+                 {node.frontmatter.image.childImageSharp.gatsbyImageData? 
+                 <GatsbyImage style={{marginTop:"10px"} } 
+                               image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                        
                          alt={node.slug}
                          className="card-image-top" />
-
+                 :<div>LINK </div>}
                   </Link>
                  
                 
