@@ -28,7 +28,7 @@ const container = {
 }
 const Layout = ({ children }) => {
   const { title, siteUrl,description } = useSiteMetadata()
-
+ 
 
   return (
     <>
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
      
         <Row key="uniqueKey1" id="uniqueID1">
           <Col md="9" key="uniqueCol1">{children}</Col>
-          <Col md="3"  key="uniqueCol2"><Sidebar/></Col>
+          <Col md="3"  key="uniqueCol2"><Sidebar /></Col>
         </Row>
         
       </div>

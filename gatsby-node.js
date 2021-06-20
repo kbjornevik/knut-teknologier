@@ -63,9 +63,10 @@ exports.onPostBuild = ({ reporter }) => {
     const posts = res.data.allMdx.edges
       // Create single blog post
       posts.forEach(({ node }) => {
-        console.log("CreatePage SingleBlog",node.slug)
+        const path = `/blog/${node.slug}`
+        console.log("CreatePage SingleBlog at Path: ",path)
         createPage({
-          path: node.slug,
+          path,
          
           component: templates.singlepost,
           context: {
@@ -92,7 +93,7 @@ exports.onPostBuild = ({ reporter }) => {
           tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1
         })
         
-        console.log(tagPostCounts)
+        console.log("Antall tagPostCounts: ",tagPostCounts)
       
       //console.log(posts.frontmatter.title)      
       // Create single blog post

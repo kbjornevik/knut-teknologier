@@ -11,10 +11,15 @@ const tagPosts = ({ data, pageContext }) => {
   const pageHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}" `
-
+ 
   return (
     <Layout pageTitle={pageHeader}>
+        {data.allMdx.edges.map(({ node }) => (
+          <div>{ console.log("TagPost",node.slug)}</div>
+
+          ))}
       {data.allMdx.edges.map(({ node }) => (
+  
         <Post
           key={node.id}
           slug={node.slug}
@@ -24,7 +29,8 @@ const tagPosts = ({ data, pageContext }) => {
           body={node.excerpt}
           tags={node.frontmatter.tags}
           fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
-        />
+        >  
+        </Post>
       ))}
     </Layout>
   );

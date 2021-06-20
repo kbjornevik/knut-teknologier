@@ -37,13 +37,13 @@ const Post = ({ id,title, author, slug, date, body, fluid, tags }) => {
     <Card style={CardStyle} key ={id}> 
        
        
-      <Link to = {`/${slug}`}>
+      <Link to = {`/blog/${slug}`} >
           <GatsbyImage image={fluid} width="100%" className="card-image-center" alt={author} />
       </Link>
       <div >
       <CardBody style={CardBodyStyle}>
         <CardTitle>
-             <h2> <Link to={`/${slug}`}> {title} </Link></h2>
+             <h2> <Link to={`/blog/${slug}`}> {title} </Link></h2>
         </CardTitle>
   
         <CardSubtitle color="primary"  id="CardSubtitleID" key="CardSubtitleKey">
@@ -63,7 +63,7 @@ const Post = ({ id,title, author, slug, date, body, fluid, tags }) => {
           ))}
         </ul>
         <Link 
-        to={`../${slug}`} className= "btn btn-outline-primary float-right">
+        to={`/blog/${slug}`} className= "btn btn-outline-primary float-right">
             Les mere.. 
         </Link>
       </CardBody>
