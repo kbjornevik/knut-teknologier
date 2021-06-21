@@ -55,10 +55,34 @@ const Sidebar = (props) => {
           
         </CardBody>
       </Card>
-         {/* ---------------  LOG  ------------------------------------------------- */}
-       
-    </div>
+         {/* ---------------  LOG ------------------------------------------------- */}
+   
+                
+     </div>
   )}
   
-  
+  const sidebarQuery = graphql`query sidebarQuery {
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 5) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD-MM-YYYY")
+          image {
+            name
+            childImageSharp {
+              gatsbyImageData(width: 300, layout: CONSTRAINED)
+            }
+          }
+        }
+        fields {
+          slug
+          }
+        slug
+      }
+    }
+  }
+}
+`
   export default Sidebar
