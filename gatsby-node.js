@@ -63,7 +63,7 @@ exports.onPostBuild = ({ reporter }) => {
     const posts = res.data.allMdx.edges
       // Create single blog post
       posts.forEach(({ node }) => {
-        const path = `/blog/${node.slug}`
+        const path = `/blog/${node.fields.slug}`
         console.log("CreatePage SingleBlog at Path: ",path)
         createPage({
           path,
@@ -102,14 +102,14 @@ exports.onPostBuild = ({ reporter }) => {
    
     tags = _.uniq(tags)
     console.log("---------------Createing the /tags page -----------")
- //   createPage({
- //     path: "/tags",
- //     component: templates.tagsPage,
- //     context: {
- //       tags,
- //       tagPostCounts,
- //     },
- //   })
+   createPage({
+      path: "/tags",
+      component: templates.tagsPage,
+      context: {
+        tags,
+        tagPostCounts,
+      },
+   })
     
  //Create tag posts Pages
  tags.forEach(tag => {

@@ -28,7 +28,7 @@ const IndexPage = () => (
                    id = {node.id}
                    title={node.frontmatter.title}
                    author={node.frontmatter.author}
-                   slug={node.slug}
+                   slug={node.fields.slug}
                    date={node.frontmatter.date}
                    body={node.excerpt}
                    fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
@@ -66,6 +66,9 @@ const IndexPage = () => (
             }
           }
         }
+        fields {
+          slug
+          }
         slug
         excerpt
       }

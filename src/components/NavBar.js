@@ -66,7 +66,7 @@ const CustomNavbar = (props) => {
                    <NavLink href="/about">Om siten </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                   <NavLink href="/blog/Om-knut">Om Knut </NavLink>
+                   <NavLink href="/blog/hei-her-har-du-knut">Om Knut </NavLink>
                 </DropdownItem>
                 <DropdownItem>
                    <NavLink href="/tags" >Tema Tags </NavLink>

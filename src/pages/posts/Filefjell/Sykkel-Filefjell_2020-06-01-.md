@@ -4,7 +4,6 @@ date: 2018-20-02 08:00:00
 description: "Sykkelturer fra Filefjell"
 author: "Knut Bjørnevik"
 image: "../../../images/Filefjell/SykkelOtrovann.jpg"
-slug: Sykkel_med_Utgangspunt_Filefjell
 tags:
   - filefjell
   - sykkel

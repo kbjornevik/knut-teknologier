@@ -22,7 +22,7 @@ const tagPosts = ({ data, pageContext }) => {
   
         <Post
           key={node.id}
-          slug={node.slug}
+          slug={node.fields.slug}
           title={node.frontmatter.title}
           author={node.frontmatter.author}
           date={node.frontmatter.date}
@@ -57,6 +57,9 @@ export const tagQuery = graphql`query ($tag: String!) {
             }
           }
         }
+        fields {
+          slug
+          }
         slug
         excerpt
       }

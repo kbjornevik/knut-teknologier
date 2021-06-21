@@ -22,7 +22,7 @@ const Sidebar = (props) => {
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-              <Link to="/blog/Om-knut">     
+              <Link to="/blog/hei-her-har-du-knut">     
                <div> <img src={KnutImg}  style={{ width: "50%" }}  alt="Knut Bjørnevik" /></div>
               </Link>
                  IT-Rådgiver, utvikler, mosjonist
@@ -31,7 +31,7 @@ const Sidebar = (props) => {
             <FormGroup>
             
             </FormGroup>
-            <Button className="btn btn-success"  href="../Om-knut">
+            <Button className="btn btn-success"  href="../hei-her-har-du-knut">
               Knut Bjørnevik
             </Button>
            {/*} <Link to = "../001-om-knut">
@@ -65,7 +65,7 @@ const Sidebar = (props) => {
               {data.allMdx.edges.map(({ node }) => (
               
                 <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                 <Link to = {`/blog/${node.slug}`}> 
+                 <Link to = {`/blog/${node.fields.slug}`}> 
                  {console.log("LOG node.title ",node.frontmatter.title)}
                  {node.frontmatter.image.childImageSharp.gatsbyImageData? 
                  <GatsbyImage style={{marginTop:"10px"} } 
@@ -80,7 +80,7 @@ const Sidebar = (props) => {
                   <CardBody id="Layout_CardBody">
                      <span className="text-info"> {node.frontmatter.date}</span>
                      <CardTitle>
-                     <Link to = {`/blog/${node.slug}`}>  
+                     <Link to = {`/blog/${node.fields.slug}`}>  
                       
                        {node.frontmatter.title} 
                       </Link>
@@ -111,6 +111,9 @@ const Sidebar = (props) => {
             }
           }
         }
+        fields {
+          slug
+          }
         slug
       }
     }
