@@ -6,8 +6,8 @@ author: "Knut Bjørnevik"
 image: "../../../images/Filefjell/SykkelOtrovann.jpg"
 slug: Sykkel_med_Utgangspunt_Filefjell
 tags:
-  - Filefjell
-  - Sykkel
+  - filefjell
+  - sykkel
 ---
 
 import {MdxTabell,TordVedTyinVann} from '../../../components/MdxTabell.js'
