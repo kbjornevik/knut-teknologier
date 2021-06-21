@@ -38,10 +38,10 @@ const CustomNavbar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           <NavItem>
-              <NavLink href="/sykkel">Sykkel</NavLink>
+              <NavLink href="/tag/sykkel">Sykkel</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/turglede">Turglede</NavLink>
+              <NavLink href="/tag/turglede">Turglede</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
