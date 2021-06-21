@@ -98,18 +98,18 @@ exports.onPostBuild = ({ reporter }) => {
       //console.log(posts.frontmatter.title)      
       // Create single blog post
      
-
+ 
    
     tags = _.uniq(tags)
-
-    createPage({
-      path: "/tags",
-      component: templates.tagsPage,
-      context: {
-        tags,
-        tagPostCounts,
-      },
-    })
+    console.log("---------------Createing the /tags page -----------")
+ //   createPage({
+ //     path: "/tags",
+ //     component: templates.tagsPage,
+ //     context: {
+ //       tags,
+ //       tagPostCounts,
+ //     },
+ //   })
     
  //Create tag posts Pages
  tags.forEach(tag => {
