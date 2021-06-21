@@ -55,69 +55,10 @@ const Sidebar = (props) => {
           
         </CardBody>
       </Card>
-      <Card>
-        <CardBody>
-          <CardTitle className="text-center text-uppercase mb-3">
-            De siste innleggene:
-          </CardTitle>
-          <StaticQuery  query={sidebarQuery}  render={(data) => (
-            <div>
-              {data.allMdx.edges.map(({ node }) => (
-              
-                <Card key={node.id} style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                 <Link to = {`/blog/${node.fields.slug}`}> 
-                 {console.log("LOG node.title ",node.frontmatter.title)}
-                 {node.frontmatter.image.childImageSharp.gatsbyImageData? 
-                 <GatsbyImage style={{marginTop:"10px"} } 
-                               image={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                        
-                         alt={node.slug}
-                         className="card-image-top" />
-                 :<div>LINK </div>}
-                  </Link>
-                 
-                
-                  <CardBody id="Layout_CardBody">
-                     <span className="text-info"> {node.frontmatter.date}</span>
-                     <CardTitle>
-                     <Link to = {`/blog/${node.fields.slug}`}>  
-                      
-                       {node.frontmatter.title} 
-                      </Link>
-                    </CardTitle>
-                  </CardBody>
-                </Card>
-              ))}
-            </div>          )}
-        />
- 
-        </CardBody>
-      </Card>
+         {/* ---------------  LOG  ------------------------------------------------- */}
+       
     </div>
   )}
   
-  const sidebarQuery = graphql`query sidebarQuery {
-  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 5) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "DD-MM-YYYY")
-          image {
-            name
-            childImageSharp {
-              gatsbyImageData(width: 300, layout: CONSTRAINED)
-            }
-          }
-        }
-        fields {
-          slug
-          }
-        slug
-      }
-    }
-  }
-}
-`
+  
   export default Sidebar
