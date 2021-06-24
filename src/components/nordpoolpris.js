@@ -4,14 +4,6 @@ import { Tooltip,Legend,LineChart, Line, XAxis, YAxis,CartesianGrid } from 'rech
 const styles = { fontFamily: 'sans - serif', textAlign: 'center'};
 const linedata = [
  { 'Kr_sand':0.57,
-   'Bergen':0.54,
-   'Oslo':0.55,
-   'Tromsø':0.19,
-   'Molde':0.52,
-   'Tr_heim':0.52,
-   'Dato':'06-10'}
-,
- { 'Kr_sand':0.57,
    'Bergen':0.51,
    'Oslo':0.52,
    'Tromsø':0.21,
@@ -122,6 +114,14 @@ const linedata = [
    'Molde':0.36,
    'Tr_heim':0.36,
    'Dato':'06-24'}
+,
+ { 'Kr_sand':0.62,
+   'Bergen':0.48,
+   'Oslo':0.48,
+   'Tromsø':0.22,
+   'Molde':0.34,
+   'Tr_heim':0.34,
+   'Dato':'06-25'}
  ] 
     const LineChartPris = ({ }) =>
     {   return ( < LineChart width ={ 700}   height ={ 250} data ={ linedata} 
