@@ -13,6 +13,7 @@ const _ = require("lodash")
 // onCreate node løper for alle filer i prosjektet . Må sjekke hva den gjør med md filer
 exports.onCreateNode =  ({ node, actions }) => {
     const { createNodeField } = actions
+    
     if (node.internal.type === "Mdx") {
       const slugFromTitle = Slugify(node.frontmatter.title)
       console.log('Lager nytt felt Slug from Tile: :', slugFromTitle)

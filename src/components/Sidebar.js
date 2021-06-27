@@ -12,6 +12,7 @@ import {
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
 import KnutImg from "../images/knutpaaprest.jpg"
+import FilefjellImg from "../images/Filefjell/Tord-Ved-Tyinvann.jpg"
 //        <a href="../001-om-knut">
 // {node.frontmatter.image.childImageSharp.gatsbyImageData}
 
@@ -23,21 +24,30 @@ const Sidebar = (props) => {
         <CardBody>
             <CardTitle className="text-center  mb-3">
               <Link to="/blog/hei-her-har-du-knut">     
-               <div> <img src={KnutImg}  style={{ width: "50%" }}  alt="Knut Bjørnevik" /></div>
+               <div> <img src={KnutImg}  style={{ width: "65%" }}  alt="Knut Bjørnevik" /></div>
               </Link>
                  IT-Rådgiver, utvikler, mosjonist
           </CardTitle>
           <Form className="text-center">
-            <FormGroup>
-            
-            </FormGroup>
+         
             <Button className="btn btn-success"  href="../hei-her-har-du-knut">
               Knut Bjørnevik
             </Button>
-           {/*} <Link to = "../001-om-knut">
-                <Badge color="primary" className="text-uppercase">
-                 OM KNUT  </Badge>
-            </Link>*/}
+           
+          </Form>
+        </CardBody>
+      </Card>
+       {/* ---------------  Filefjell ------------------------------------------------- */}
+       <Card>
+        <CardBody>
+            <CardTitle className="text-center  mb-3">
+              <Link to="/blog/sykling-med-utgangspunkt-filefjell">     
+               <div> <img src={FilefjellImg}  style={{ width: "80%" }}  alt="Filefjell, Otrøvann" /></div>
+              </Link>
+                 Sykkelturer på Filefjell, Vang, Lærdal
+          </CardTitle>
+          <Form className="text-center">
+          
           </Form>
         </CardBody>
       </Card>
