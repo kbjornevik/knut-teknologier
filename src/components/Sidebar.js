@@ -109,7 +109,7 @@ const Sidebar = (props) => {
   )}
   
   const sidebarQuery = graphql`query sidebarQuery {
-  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 5) {
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 1) {
     edges {
       node {
         id
