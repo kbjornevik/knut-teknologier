@@ -12,7 +12,7 @@ import {
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
 import KnutImg from "../images/knutpaaprest.jpg"
-import FilefjellImg from "../images/Filefjell/Tord-ved-Tyinvann.jpg"
+import FilefjellImg from "../images/Filefjell/tordvedtyinvann.jpg"
 //        <a href="../001-om-knut">
 // {node.frontmatter.image.childImageSharp.gatsbyImageData}
 
