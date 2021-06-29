@@ -80,7 +80,7 @@ const Hornellen = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} class="img-rounded mx-auto d-block" height="400" />
+        <img src={item.src} alt={item.altText} className="img-rounded mx-auto d-block" height="400" />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );
@@ -88,7 +88,7 @@ const Hornellen = (props) => {
 
   return (
     <Container>
-       <div class="card bg-dark text-white">
+       <div className="card bg-dark text-white">
           <Carousel
             activeIndex={activeIndex}
             next={next}
