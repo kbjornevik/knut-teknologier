@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }  
+
+  .flex-container {
+    display: flex;
+    flex-direction: row!important;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.15);
+    flex-wrap: wrap!important;
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+  .flex-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 33%;
+    border: 1px solid rgba(176, 18, 18, 0.15);
+  }
+  
+  .flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+  }
+
+
+  
+  /* Create four equal columns that floats next to each other */
+  .frcolumn {
+    background-color:#f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 50%;
+    padding: 16px;
+    margin-bottom: 20px;
+    
+  }
+  .tull {
+    border: 3px solid red;
+  }
+  /* Clear floats after the columns */
+  .frrow:after {
+    content: "";
+    display: table;
+    clear: both;
+    border: px solid blue;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 2500px) {
+    .frcolumn  {
+      width: 50%;
+     }
+    
+  }
+
+  
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .frcolumn  {
+      width: 100%;
+      
+    }
+    
+  }
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 400px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }

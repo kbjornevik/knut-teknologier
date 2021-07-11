@@ -45,10 +45,12 @@ exports.onPostBuild = ({ reporter }) => {
           edges{  
             node {
               slug
+              id
               frontmatter {
                 title
                 author
                 tags
+                templateKey
               }
               fields {
               slug
@@ -64,15 +66,19 @@ exports.onPostBuild = ({ reporter }) => {
     const posts = res.data.allMdx.edges
       // Create single blog post
       posts.forEach(({ node }) => {
-        const path = `/blog/${node.fields.slug}`
-        console.log("CreatePage SingleBlog at Path: ",path)
+        const id = node.id
+        const pathslug = `/blog/${node.fields.slug}`;
+      //  console.log("CreatePage SingleBlog at Path: ",pathslug)
+        var templateKey =  `src/templates/${String(node.frontmatter.templateKey)}.js`
+        console.log("CreatePage SingleBlog at Path: ",pathslug, " Templatkey=",templateKey, " Node ID ", id)
         createPage({
-          path,
-         
-          component: templates.singlepost,
+          path: `/blog/${node.fields.slug}`,
+          component: path.resolve(templateKey)
+        ,
           context: {
             // passing slug for template to get post
-            slug: node.slug
+            slug: node.slug,
+            id: node,id,
             // find author imageUrl from authors and pass it to the single post template
             
           },

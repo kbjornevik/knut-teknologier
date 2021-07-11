@@ -13,8 +13,8 @@ import {  Collapse,
   DropdownItem,
    } from 'reactstrap';
 import '../../node_modules/bootstrap/scss/bootstrap.scss';
-
-
+import logo from '../images/logo.svg'
+// Generere CSV fil {/*https://maketext.io*/}
 const CustomNavbar = (props) => {
  const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +33,9 @@ const CustomNavbar = (props) => {
     <div id="NavContainer" style={divStyle}>
       <Navbar color="ligth" light  expand="md" id="site-navbar" style={divStyle} >
         {/* <Container> */}
-        <NavbarBrand style={{color: '#000'}} bg="dark" href="/">Knut</NavbarBrand>
+        <NavbarBrand style={{color: '#000'}} bg="dark" href="/">
+        <img src={logo} alt="KNUT" style={{ width: '66px' }} />
+          </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

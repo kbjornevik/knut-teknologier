@@ -6,8 +6,7 @@ import {
   Card,
   CardTitle,
   CardBody,
-  Form,
-  FormGroup,
+  Form
 
 } from "reactstrap"
 import bergenckImg from "../images/vossgeilo2019.jpg" 
@@ -41,7 +40,7 @@ const Sidebar = (props) => {
        <Card>
         <CardBody>
             <CardTitle className="text-center  mb-3">
-              <Link to="/blog/sykling-med-utgangspunkt-filefjell">     
+              <Link to="/blog/filefjell-sykling">     
                <div> <img src={FilefjellImg}  style={{ width: "80%" }}  alt="Filefjell, Otrøvann" /></div>
               </Link>
                  Sykkelturer på Filefjell, Vang, Lærdal
@@ -109,7 +108,7 @@ const Sidebar = (props) => {
   )}
   
   const sidebarQuery = graphql`query sidebarQuery {
-  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 1) {
+  allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 6) {
     edges {
       node {
         id

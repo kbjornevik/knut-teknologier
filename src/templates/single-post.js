@@ -81,8 +81,8 @@ const SinglePost = ({ data,pageContext }) => {
 }
 //  allMdx(filter : {slug: { eq: $slug }} ) {
   
-export const postQuery = graphql`query blogPostBySlug($slug: String!) {
-  mdx(slug: {eq: $slug}) {
+export const postQuery = graphql`query blogPostBySlug($id: String!) {
+  mdx(id: {eq: $id}) {
     frontmatter {
       author
       title
