@@ -30,8 +30,7 @@ const AboutPage = () => (
             
             <h2>Blog</h2>
             Slik at denne siten ser nå ut til å bli mere en Blog.</p>
-
-            
+           
       </Layout>
       )
     

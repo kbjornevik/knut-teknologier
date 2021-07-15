@@ -119,7 +119,7 @@ export const FilefjellPost = ({
   
     </Container>
 
-    Hei dette er knut i FilefjellPost
+   
     </div>
   ) // Slutt FilefjellPost
 

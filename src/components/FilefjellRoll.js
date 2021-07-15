@@ -24,12 +24,12 @@ class FilefjellRoll extends React.Component {
            
              <div className="frcolumn"  key={post.slug}>
                
-             <h1 style={{textAlign: "Left"}}>{post.frontmatter.title}</h1>
+             <h1 style={{textAlign: "Left"}}>{post.frontmatter.subtitle}</h1>
              <Link to = {`/blog/${post.fields.slug}`}> 
              <GatsbyImage image={post.frontmatter.image.childImageSharp.gatsbyImageData}  alt="post.frontmatter.author" />
              </Link>
                 <p> {post.excerpt}</p>
-                <p>LINK:{post.fields.slug}</p>
+               
                 <Link className="button"  to = {`/blog/${post.fields.slug}`}>
                     Les mer...
                  </Link>
@@ -59,7 +59,7 @@ export default () => (
       query BlogRollQuery {
         allMdx(
             filter: {frontmatter: {templateMenuKey: {eq: "filefjell-page"}}}
-            sort: {fields: frontmatter___title}
+            sort: {fields: frontmatter___subtitle}
           ) {
             edges {
               node {
@@ -67,6 +67,7 @@ export default () => (
                 frontmatter {
                   author
                   title
+                  subtitle
                   date
                   description
                   heading

@@ -61,9 +61,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
+        name: `Knut the legende`,
+        short_name: `Knut a Blog`,
+        start_url: `https://kbjornevikgatsby.netlify.app/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
