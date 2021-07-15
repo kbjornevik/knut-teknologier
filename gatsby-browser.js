@@ -6,8 +6,9 @@
  //const React = require("react")
  //bootstrap 
  
-
+ export const registerServiceWorker = () => true
  import "./node_modules/bootstrap/scss/bootstrap.scss"
+
 
 
  

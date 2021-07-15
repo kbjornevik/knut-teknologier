@@ -70,6 +70,8 @@ module.exports = {
         icon: `src/images/kraft-icon.png`, // This path is relative to the root of the site.
       },
     },
+    
+    'gatsby-plugin-offline',
     //`gatsby-transformer-remark`, Tatt ut Søndag 15.11
       //Ny for MDX
     {resolve: `gatsby-plugin-mdx`,  //Ny for MDX
